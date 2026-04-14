@@ -9,7 +9,7 @@ const Home = () => {
 
       <div className="relative flex items-center justify-center mb-10 mt-25">
         <AscendedMark />
-        <h1 className="absolute font-Roboto text-9xl text-title font-bold tracking-widest">
+        <h1 className="absolute font-Roboto text-9xl text-title font-bold tracking-tighter ">
           ASCENDED
         </h1>
       </div>
