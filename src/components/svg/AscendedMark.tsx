@@ -1,6 +1,6 @@
 export const AscendedMark = () => {
   return (
-    <svg viewBox="0 0 200 200" className="w-72">
+    <svg id="ascended-rune" viewBox="0 0 200 200" className="w-72">
       <defs>
         <linearGradient id="arcane" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#7c3aed" />

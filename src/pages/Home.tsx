@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import MIDNIGHT_RAIDS from "../constants/midnightRaids";
-import { AscendedMark } from "../components/AscendedMark";
+import { AscendedMark } from "../components/svg/AscendedMark";
+import { AscendedTitle } from "../components/svg/AscendedTitle";
 
 const Home = () => {
   return (
@@ -9,13 +10,13 @@ const Home = () => {
 
       <div className="relative flex items-center justify-center mb-10 mt-25">
         <AscendedMark />
-        <h1 className="absolute font-Roboto text-9xl text-title font-bold tracking-tighter ">
-          ASCENDED
-        </h1>
+        <div className="absolute font-Roboto text-9xl text-title font-bold tracking-tighter ">
+          <AscendedTitle />
+        </div>
       </div>
 
       <div className="flex flex-col md:flex-row gap-4 justify-center">
-        {MIDNIGHT_RAIDS.map(({bossImage}) => (<img className="hover:saturate-0" src={bossImage} />))}
+        {MIDNIGHT_RAIDS.map(({bossImage, defeated}) => (<img className={`${defeated ? "saturate-10" : null}`} src={bossImage} />))}
       </div>
     </div>
   );

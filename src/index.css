@@ -169,3 +169,27 @@
   animation: spinReverse 8s linear infinite;
   transform-origin: 100px 100px;
 }
+
+#page-title path {
+  fill: transparent;
+  stroke: #FFFFFF;
+  stroke-width: 2px;
+  stroke-dasharray: 470;
+  stroke-dashoffset: 0;
+  animation: TextAnimation 3s ease-in-out 1 forwards;
+}
+
+@keyframes TextAnimation {
+  0% {
+    stroke-dashoffset: 470;
+  }
+
+  80% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: #FFFFFF;
+    stroke-dashoffset: 0;
+  }
+}
