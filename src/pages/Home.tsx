@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import MIDNIGHT_RAIDS from "../constants/midnightRaids";
-import { AscendedMark } from "../components/svg/AscendedMark";
 import { AscendedTitle } from "../components/svg/AscendedTitle";
+import { MagiMark } from "../components/svg/MagiMark";
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
       <Navbar />
 
       <div className="relative flex items-center justify-center mb-10 mt-25">
-        <AscendedMark />
+        <MagiMark />
         <div className="absolute font-Roboto text-9xl text-title font-bold tracking-tighter ">
           <AscendedTitle />
         </div>

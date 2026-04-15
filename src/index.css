@@ -193,3 +193,33 @@
     stroke-dashoffset: 0;
   }
 }
+
+@layer utilities {
+  @keyframes draw {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+    100% {
+      stroke-dashoffset: -1000;
+    }
+  }
+
+  .animate-draw {
+    animation: draw 6s linear infinite;
+  }
+
+  @keyframes fadeInSoft {
+    0% {
+      opacity: 0;
+      filter: blur(6px);
+    }
+    100% {
+      opacity: 0.6;
+      filter: blur(2px);
+    }
+  }
+
+  .animate-fade-arcane {
+    animation: fadeInSoft 1.2s ease-out forwards;
+  }
+}
