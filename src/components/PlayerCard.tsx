@@ -18,7 +18,7 @@ const PlayerCard = ({ rank, name, description, firstImage, secondImage, thirdIma
 
         <div>
           <p className="font-bold tracking-tighter text-xl mb-5">{rank}</p>
-          <p className="font-bold text-3xl mb-5">{name}</p>
+          <p className="font-bold text-3xl mb-5 uppercase">{name}</p>
           <p className="text-sm mb-6 grow">{description}</p>
         </div>
 

@@ -15,8 +15,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-4 justify-center">
-        {MIDNIGHT_RAIDS.map(({bossImage, defeated}) => (<img className={`${defeated ? "saturate-10" : null}`} src={bossImage} />))}
+      <div className="grid grid-cols-3 lg:grid-cols-9 w-fit mx-auto gap-1 place-items-center pb-15 lg:pb-5">
+        {MIDNIGHT_RAIDS.map(({bossImage, defeated}) => (<img className={`${defeated ? "saturate-5" : null} min-h-48 h-48 min-w-37 w-37`} src={bossImage} />))}
       </div>
     </div>
   );
