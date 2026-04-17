@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 type InputFormProps = Partial<{
   type: string;
   id: string;
@@ -8,6 +9,8 @@ type InputFormProps = Partial<{
 }>
 
 export const InputForm = ({type, id, required, className}: InputFormProps) => {
+
+  const webhook = process.env.DISCORD_WEBHOOK;
 
   const [formData, setFormData] = useState({
     main: "",
@@ -27,23 +30,10 @@ export const InputForm = ({type, id, required, className}: InputFormProps) => {
     }));
   };
 
-  const sendToDiscord = async (formData) => {
-    await fetch("https://discord.com/api/webhooks/1494504149147193486/o5wNZakwZnScRZD-qjMWoemW-lV4hKVgZeX4N32_32hlZYWGVy-lnfqRQ7iokr5-_A4V", {
-      method: "POST",
-      headers: {
-        "Context-Type": "application/json"
-      },
-      body: JSON.stringify({
-        content: ` New Application
-        Main Class: ${formData.main}
-        Alt Class: ${formData.alt}
-        Raiding Experience: ${formData.experience}
-        Availability: ${formData.availability}
-        Reasons: ${formData.reasons}
-        Contact: ${formData.contact}
-        `
-      })
-    })
+  const handleClick = () => {
+    console.log(formData);
+    setFormData({ main: "", alt: "", experience: "", availability: "", reasons: "", contact: "",})
+
   }
 
   return (
@@ -64,7 +54,7 @@ export const InputForm = ({type, id, required, className}: InputFormProps) => {
           </div>
 
           <div>
-            <button onClick={sendToDiscord} type="submit" className="bg-blue-500 px-3 py-2 rounded-sm">ENVIAR</button>
+            <button onClick={handleClick} type="submit" className="bg-blue-500 px-3 py-2 rounded-sm">ENVIAR</button>
           </div>
 
       </div>
