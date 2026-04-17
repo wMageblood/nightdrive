@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 type InputFormProps = Partial<{
   type: string;
   id: string;
@@ -6,20 +8,65 @@ type InputFormProps = Partial<{
 }>
 
 export const InputForm = ({type, id, required, className}: InputFormProps) => {
+
+  const [formData, setFormData] = useState({
+    main: "",
+    alt: "",
+    experience: "",
+    availability: "",
+    reasons: "",
+    contact: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { id, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+  };
+
+  const sendToDiscord = async (formData) => {
+    await fetch("https://discord.com/api/webhooks/1494504149147193486/o5wNZakwZnScRZD-qjMWoemW-lV4hKVgZeX4N32_32hlZYWGVy-lnfqRQ7iokr5-_A4V", {
+      method: "POST",
+      headers: {
+        "Context-Type": "application/json"
+      },
+      body: JSON.stringify({
+        content: ` New Application
+        Main Class: ${formData.main}
+        Alt Class: ${formData.alt}
+        Raiding Experience: ${formData.experience}
+        Availability: ${formData.availability}
+        Reasons: ${formData.reasons}
+        Contact: ${formData.contact}
+        `
+      })
+    })
+  }
+
   return (
     <div>
 
-      <div className="mx-auto bg-red-500 min-w-xl w-xl lg:w-3xl min-h-6xl h-6xl rounded-sm">
-        <div className="flex justify-between">
-          <input className="bg-sky-400" placeholder="form0" type="text" />
-          <input className="bg-lime-400" type="text" placeholder="form1" />
-        </div>
-        <div>
-          <input className="bg-purple-700 w-full" placeholder="form2" type="text" />
-          <input className="bg-slate-600 w-full" placeholder="form3" type="text" />
-          <input className="bg-pink-600 w-full" placeholder="form4" type="text" />
-          <input className="bg-blue-800 w-full" placeholder="form5" type="text" />
-        </div>
+      <div className="mx-auto bg-black min-w-xl w-xl lg:w-3xl min-h-6xl h-6xl rounded-sm p-3">
+
+          <div className="flex justify-between *:mb-5 *:pl-2">
+            <input id="main" className="bg-sky-900 rounded-sm h-9" value={formData.main} onChange={handleChange} placeholder="Main Class" type="text" />
+            <input id="alt" className="bg-sky-900 rounded-sm h-9" value={formData.alt} onChange={handleChange} type="text" placeholder="Alt Class" />
+          </div>
+
+          <div className="*:w-full *:mb-5 *:pl-2">
+            <input id="experience" className="bg-sky-900 rounded-sm h-9" value={formData.experience} onChange={handleChange} placeholder="Raiding Experience" type="text" />
+            <input id="availability" className="bg-sky-900 rounded-sm h-9" value={formData.availability} onChange={handleChange} placeholder="Availability" type="text" />
+            <input id="reasons" className="bg-sky-900 rounded-sm h-9" value={formData.reasons} onChange={handleChange} placeholder="Apply Reasons" type="text" />
+            <input id="contact" className="bg-sky-900 rounded-sm h-9" value={formData.contact} onChange={handleChange} placeholder="DISCORD / BATTLE NET / CONTACT INFO" type="text" />
+          </div>
+
+          <div>
+            <button onClick={sendToDiscord} type="submit" className="bg-blue-500 px-3 py-2 rounded-sm">ENVIAR</button>
+          </div>
+
       </div>
 
     </div>

@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import { ApplyTitle } from "../components/svg/ApplyTitle";
 import { InputForm } from "../components/InputForm"
+import INPUT_FORM_DATA from "../constants/inputFormData";
 
 const Apply = () => {
   return (
