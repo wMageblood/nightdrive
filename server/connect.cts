@@ -1,5 +1,5 @@
-const { MongoClient } = require("mongodb")
-require("dotenv").config({ path: "./config.env" })
+const { MongoClient } = require("mongodb");
+require("dotenv").config({ path: "./config.env" });
 
 async function main() {
 
