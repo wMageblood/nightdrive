@@ -10,7 +10,7 @@ type InputFormProps = Partial<{
 
 export const InputForm = ({type, id, required, className}: InputFormProps) => {
 
-  const webhook = process.env.DISCORD_WEBHOOK;
+  // const webhook = process.env.DISCORD_WEBHOOK;
 
   const [formData, setFormData] = useState({
     main: "",

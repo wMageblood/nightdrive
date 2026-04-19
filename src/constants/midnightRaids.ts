@@ -8,7 +8,7 @@ const MIDNIGHT_RAIDS = [
   { boss: "Vaelgor", bossImage: MIDNIGHT.vaelgor, defeated: true },
   { boss: "Vanguard", bossImage: MIDNIGHT.vanguard, defeated: true },
   { boss: "Crown", bossImage: MIDNIGHT.crown, defeated: true },
-  { boss: "Beloren", bossImage: MIDNIGHT.beloren, defeated: false },
+  { boss: "Beloren", bossImage: MIDNIGHT.beloren, defeated: true },
   { boss: "Lura", bossImage: MIDNIGHT.lura, defeated: false },
 ];
 

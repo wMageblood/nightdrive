@@ -96,10 +96,10 @@
 .button-delete-primary {
   @apply bg-red-500;
 }
-
+/*
 .bg-arcane-dark {
   @apply linear-gradient(to bottom, #0a0f12, #020304);
-}
+} */
 
 @keyframes drawFast {
   0% {

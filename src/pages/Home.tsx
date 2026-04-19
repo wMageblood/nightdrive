@@ -16,7 +16,7 @@ const Home = () => {
       </div>
 
       <div className="grid grid-cols-3 lg:grid-cols-9 w-fit mx-auto gap-1 place-items-center pb-15 lg:pb-5">
-        {MIDNIGHT_RAIDS.map(({bossImage, defeated}) => (<img className={`${defeated ? "saturate-5" : null} min-h-48 h-48 min-w-37 w-37`} src={bossImage} />))}
+        {MIDNIGHT_RAIDS.map(({bossImage, defeated, boss}) => (<img key={boss} className={`${defeated ? "saturate-5" : null} min-h-48 h-48 min-w-37 w-37`} src={bossImage} />))}
       </div>
     </div>
   );
