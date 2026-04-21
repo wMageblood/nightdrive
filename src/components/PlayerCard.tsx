@@ -9,7 +9,7 @@ interface PlayerCardProps {
   secondImage: any;
   thirdImage: any;
   mainClass: string;
-}
+};
 
 const PlayerCard = ({ rank, name, description, firstImage, secondImage, thirdImage, mainClass}: PlayerCardProps) => {
 
