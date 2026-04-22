@@ -1,13 +1,6 @@
 import { useState } from "react";
 import WOW_CLASSES from "../constants/wowClasses";
 
-type InputFormProps = Partial<{
-  type: string;
-  id: string;
-  required: boolean;
-  className: string;
-}>
-
 const initialState = { main: "", alt: "", mainClassOption: "", experience: "", availability: "", reasons: "", contact: ""};
 
 export const InputForm = () => {
@@ -55,9 +48,18 @@ export const InputForm = () => {
           </div>
 
           <div className="flex justify-between *:mb-5 *:pl-2">
-            <select className="bg-red-500" value={form.mainClassOption} onChange={(e) => setForm({ ...form, mainClassOption: e.target.value})}>
-              {WOW_CLASSES.map((classes) => <option id="mainClassOption" value={classes}>{classes}</option>)}
+
+            <select className="px-3 bg-white" value={form.mainClassOption} onChange={(e) => setForm({ ...form, mainClassOption: e.target.value})}>
+              {WOW_CLASSES.map(({ wowClass, spec }) => <option key={spec} value={spec} className="odd:bg-red-500 even:bg-red-200">{`${wowClass} - ${spec}`}</option>)}
             </select>
+
+            {/* <select className="px-3 bg-white" value={form.mainClassOption} onChange={(e) => setForm({ ...form, mainClassOption: e.target.value })}>
+              <option value="">Select a spec</option>
+
+              {WOW_CLASSES.map(({ wowClass, spec }) => (<option key={spec} value={spec} className="odd:bg-red-500 even:bg-red-200">{`${wowClass} - ${spec}`}</option>))}
+              </select> */}
+
+
           </div>
 
           <div className="*:w-full *:mb-5 *:pl-2">

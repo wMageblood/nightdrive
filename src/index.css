@@ -227,3 +227,7 @@
     animation: fadeInSoft 1.2s ease-out forwards;
   }
 }
+
+.options::picker {
+
+}

@@ -36,9 +36,9 @@ app.post("/apply", async (req, res) => {
         embeds: [
           {
             title: "📩 New Application",
-            color: 0xc174b6,
+            color: 0x3d017d,
             fields: [
-              { name: "Main", value: data.main, inline: true },
+              { name: " :classicon_druid: Main", value: data.main, inline: true },
               { name: "Alt", value: data.alt, inline: true },
               { name: "Spec", value: data.mainClassOption, inline: true },
               { name: "Experience", value: data.experience },
