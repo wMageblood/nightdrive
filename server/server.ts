@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 import { Application } from "./models/applications"
+import { CLASS_EMOJIS } from "./constants/classEmojis";
 
 const app = express();
 
@@ -22,12 +23,17 @@ app.listen(3001, () => {
 })
 
 app.post("/apply", async (req, res) => {
+
+
   try {
 
     const data = req.body
     const saved = await Application.create(data);
 
-    await fetch(process.env.DISCORD_WEBHOOK_URL!, {
+    const mainIcon = CLASS_EMOJIS[data.main] || "";
+    const altIcon = CLASS_EMOJIS[data.alt] || "";
+
+    await fetch(process.env.DISCORD_ASCENDED_WEBHOOK_URL!, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -38,8 +44,8 @@ app.post("/apply", async (req, res) => {
             title: "📩 New Application",
             color: 0x3d017d,
             fields: [
-              { name: " :classicon_druid: Main", value: data.main, inline: true },
-              { name: "Alt", value: data.alt, inline: true },
+              { name: `Main`, value: `${mainIcon} ${data.main}`, inline: true },
+              { name: "Alt", value: `${altIcon} ${data.alt}`, inline: true },
               { name: "Spec", value: data.mainClassOption, inline: true },
               { name: "Experience", value: data.experience },
               { name: "Availability", value: data.availability },
