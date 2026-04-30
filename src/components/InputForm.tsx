@@ -50,7 +50,7 @@ export const InputForm = () => {
           <div className="flex justify-between *:mb-5 *:pl-2">
 
             <select className="px-3 bg-white" value={form.mainClassOption} onChange={(e) => setForm({ ...form, mainClassOption: e.target.value})}>
-              {WOW_CLASSES.map(({ wowClass, spec }) => <option key={spec} value={spec} className="odd:bg-red-500 even:bg-red-200">{`${wowClass} - ${spec}`}</option>)}
+              {WOW_CLASSES.map(({ wowClass, spec, key }) => <option key={key} value={spec} className="odd:bg-red-500 even:bg-red-200">{`${wowClass} - ${spec}`}</option>)}
             </select>
 
             {/* <select className="px-3 bg-white" value={form.mainClassOption} onChange={(e) => setForm({ ...form, mainClassOption: e.target.value })}>

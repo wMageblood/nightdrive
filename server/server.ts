@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 import cors from "cors";
 import { Application } from "./models/applications"
 import { CLASS_EMOJIS } from "./constants/classEmojis";
+import { CLASS_COLORS } from "./constants/classColors";
+
 
 const app = express();
 
@@ -32,6 +34,7 @@ app.post("/apply", async (req, res) => {
 
     const mainIcon = CLASS_EMOJIS[data.main] || "";
     const altIcon = CLASS_EMOJIS[data.alt] || "";
+    const classColors = CLASS_COLORS[data.main] || "";
 
     await fetch(process.env.DISCORD_ASCENDED_WEBHOOK_URL!, {
       method: "POST",
@@ -41,16 +44,15 @@ app.post("/apply", async (req, res) => {
       body: JSON.stringify({
         embeds: [
           {
-            title: "📩 New Application",
-            color: 0x3d017d,
+            color: classColors,
             fields: [
               { name: `Main`, value: `${mainIcon} ${data.main}`, inline: true },
-              { name: "Alt", value: `${altIcon} ${data.alt}`, inline: true },
               { name: "Spec", value: data.mainClassOption, inline: true },
-              { name: "Experience", value: data.experience },
-              { name: "Availability", value: data.availability },
-              { name: "Reasons", value: data.reasons },
-              { name: "Contact", value: data.contact },
+              { name: "Alt", value: `${altIcon} ${data.alt}`, inline: true },
+              { name: "**__Experience__**:", value: data.experience },
+              { name: "**__Availability__**:", value: data.availability },
+              { name: "**__Reasons__**:", value: data.reasons },
+              { name: "**__Contact__**:", value: data.contact },
             ],
           },
         ],
