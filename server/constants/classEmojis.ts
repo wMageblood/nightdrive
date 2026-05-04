@@ -8,8 +8,8 @@ export const CLASS_EMOJIS: Record<string, string> = {
   Shaman: "<:classicon_shaman:1496633951899615372>",
   Paladin: "<:classicon_paladin:1496633886166224977>",
   Warlock: "<:classicon_warlock:1496634025459187833>",
-  DemonHunter: "<:classicon_demonhunter:1496633796001529898>",
-  DeathKnight: "<:spell_deathknight_classicon:1496634045453439100>",
+  DH: "<:classicon_demonhunter:1496633796001529898>",
+  DK: "<:spell_deathknight_classicon:1496634045453439100>",
   Evoker: "<:classicon_evoker:1496633815097933924>",
   Monk: "<:classicon_monk:1496633851114688656>",
 };

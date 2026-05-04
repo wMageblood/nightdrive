@@ -1,0 +1,15 @@
+export const CLASS_NAMES = [
+  { wowClass: "Death Knight", value: "DK", icon: "" },
+  { wowClass: "Demon Hunter", value: "DH", icon: "" },
+  { wowClass: "Druid", value: "Druid", icon: "" },
+  { wowClass: "Evoker", value: "Evoker", icon: "" },
+  { wowClass: "Hunter", value: "Hunter", icon: "" },
+  { wowClass: "Mage", value: "Mage", icon: "" },
+  { wowClass: "Monk", value: "Monk", icon: "" },
+  { wowClass: "Paladin", value: "Paladin", icon: "" },
+  { wowClass: "Priest", value: "Priest", icon: "" },
+  { wowClass: "Rogue", value: "Rogue", icon: "" },
+  { wowClass: "Shaman", value: "Shaman", icon: "" },
+  { wowClass: "Warlock", value: "Warlock", icon: "" },
+  { wowClass: "Warrior", value: "Warrior", icon: "" },
+];

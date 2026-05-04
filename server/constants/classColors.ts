@@ -8,8 +8,8 @@ export const CLASS_COLORS: Record<string, number> = {
   Shaman: 0x0070dd,
   Paladin: 0xf48cba,
   Warlock: 0x8788ee,
-  DemonHunter: 0xa339c9,
-  DeathKnight: 0xc41e3a,
+  DH: 0xa339c9,
+  DK: 0xc41e3a,
   Evoker: 0x33937F,
   Monk: 0x00ff98,
 };
