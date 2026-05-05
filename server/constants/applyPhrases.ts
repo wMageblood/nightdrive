@@ -8,5 +8,7 @@ export const APPLY_PHRASES = [
   "yapo, llego un apply po",
   "is ki lligui in appli po",
   "conchesumare",
-  "grump es el primer peruano con afro"
+  "grump es el primer peruano con afro",
+  "cara de mono resfriado",
+  "one apple a day keeps the doctor away"
 ];

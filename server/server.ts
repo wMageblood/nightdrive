@@ -49,8 +49,8 @@ app.post("/apply", async (req, res) => {
         content: `# ${randomPhrase}`,
         embeds: [
           {
-            title: data.name,
-            description: `<:raiderioicon:1500995575867248680>  [RaiderIO](https://www.raider.io/characters/us/ragnaros/${data.name}) \n <:wlogsicon:1500994865356476577>  [Logs](https://www.warcraftlogs.com/character/us/tichondrius/${data.name})`,
+            title: `${data.name} - ${data.realm}`,
+            description: `<:raiderioicon:1500995575867248680>  [RaiderIO](https://www.raider.io/characters/us/${data.realm}/${data.name}) \n <:wlogsicon:1500994865356476577>  [Logs](https://www.warcraftlogs.com/character/us/${data.realm}/${data.name}) \n <:wowicon:1501033954080194660> [Armory](https://worldofwarcraft.com/en-us/character/us/${data.realm}/${data.name})`,
             color: classColors,
             fields: [
               { name: "Main", value: `${mainIcon} ${data.main}`, inline: true },
