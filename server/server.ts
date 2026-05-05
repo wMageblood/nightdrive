@@ -7,6 +7,7 @@ import { CLASS_EMOJIS } from "./constants/classEmojis";
 import { CLASS_COLORS } from "./constants/classColors";
 import { APPLY_PHRASES } from "./constants/applyPhrases";
 import { ROLE_EMOJIS } from "./constants/roleEmojis";
+import normalizeString from "./utils/normalizeString";
 
 
 const app = express();
@@ -50,7 +51,7 @@ app.post("/apply", async (req, res) => {
         embeds: [
           {
             title: `${data.name} - ${data.realm}`,
-            description: `<:raiderioicon:1500995575867248680>  [RaiderIO](https://www.raider.io/characters/us/${data.realm}/${data.name}) \n <:wlogsicon:1500994865356476577>  [Logs](https://www.warcraftlogs.com/character/us/${data.realm}/${data.name}) \n <:wowicon:1501033954080194660> [Armory](https://worldofwarcraft.com/en-us/character/us/${data.realm}/${data.name})`,
+            description: `<:raiderioicon:1500995575867248680>  [RaiderIO](https://www.raider.io/characters/us/${normalizeString(data.realm)}/${normalizeString(data.name)}) \n <:wlogsicon:1500994865356476577>  [Logs](https://www.warcraftlogs.com/character/us/${normalizeString(data.realm)}/${normalizeString(data.name)}) \n <:wowicon:1501033954080194660> [Armory](https://worldofwarcraft.com/en-us/character/us/${normalizeString(data.realm)}/${normalizeString(data.name)})`,
             color: classColors,
             fields: [
               { name: "Main", value: `${mainIcon} ${data.main}`, inline: true },
