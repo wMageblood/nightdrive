@@ -3,11 +3,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 import { Application } from "./models/applications"
-import { CLASS_EMOJIS } from "./constants/classEmojis";
-import { CLASS_COLORS } from "./constants/classColors";
-import { APPLY_PHRASES } from "./constants/applyPhrases";
-import { ROLE_EMOJIS } from "./constants/roleEmojis";
 import normalizeString from "./utils/normalizeString";
+import { CLASS_EMOJIS, CLASS_COLORS, ROLE_EMOJIS, APPLY_PHRASES } from "./constants/embededMessageProperties"
 
 
 const app = express();

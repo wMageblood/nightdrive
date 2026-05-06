@@ -1,14 +1,18 @@
 import { useState } from "react";
-import WOW_CLASSES from "../constants/wowClasses";
+import { CLASS_NAMES } from "../../server/constants/classNames";
+import { ROLE_NAMES } from "../../server/constants/roleNames";
+import { REALM_LIST } from "../constants/realmList";
 
-const initialState = { main: "", alt: "", mainClassOption: "", experience: "", availability: "", reasons: "", contact: ""};
+const initialState = {name: "", realm: "", main: "", alt: "", role: "", experience: "", availability: "", reasons: "", contact: ""};
 
 export const InputForm = () => {
 
   const [form, setForm] = useState({
+    name: "",
+    realm: "",
     main: "",
     alt: "",
-    mainClassOption: "",
+    role: "",
     experience: "",
     availability: "",
     reasons: "",
@@ -29,7 +33,6 @@ export const InputForm = () => {
       });
 
       const result = await res.json()
-      console.log(form)
       console.log(result);
       setForm({...initialState})
     } catch (err) {
@@ -42,24 +45,30 @@ export const InputForm = () => {
 
       <div className="mx-auto bg-black min-w-xl w-xl lg:w-3xl min-h-6xl h-6xl rounded-sm p-3">
 
-          <div className="flex justify-between *:mb-5 *:pl-2">
-            <input id="main" className="bg-sky-900 rounded-sm h-9" value={form.main} onChange={(e) => setForm({ ...form, main: e.target.value})} placeholder="Main Class" type="text" />
-            <input id="alt" className="bg-sky-900 rounded-sm h-9" value={form.alt} onChange={(e) => setForm({ ...form, alt: e.target.value})} type="text" placeholder="Alt Class" />
-          </div>
+        <div>
+          <input id="name" className="bg-sky-900 rounded-sm h-9 w-full mb-5 pl-2" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value})} placeholder="Nombre o cómo deberíamos llamarte" type="text" />
+          <select id="realm" className="bg-sky-900 text-gray-800 mb-5 pl-2 py-1 rounded-sm" value={form.realm} onChange={(e) => setForm({ ...form, realm: e.target.value})}>
+            <option value="">Reino</option>
+            {REALM_LIST.map((realm) => <option value={realm}>{realm}</option>)}
+          </select>
+        </div>
 
           <div className="flex justify-between *:mb-5 *:pl-2">
 
-            <select className="px-3 bg-white" value={form.mainClassOption} onChange={(e) => setForm({ ...form, mainClassOption: e.target.value})}>
-              {WOW_CLASSES.map(({ wowClass, spec, key }) => <option key={key} value={spec} className="odd:bg-red-500 even:bg-red-200">{`${wowClass} - ${spec}`}</option>)}
+            <select id="main" className="bg-sky-900 text-gray-800 mb-5 pl-2 py-1 rounded-sm" value={form.main} onChange={(e) => setForm({ ...form, main: e.target.value })}>
+                <option value="">Main Class</option>
+                {CLASS_NAMES.map(({wowClass, value}) => <option key={value} value={value}>{wowClass}</option>)}
             </select>
 
-            {/* <select className="px-3 bg-white" value={form.mainClassOption} onChange={(e) => setForm({ ...form, mainClassOption: e.target.value })}>
-              <option value="">Select a spec</option>
+            <select id="alt" className="bg-sky-900 text-gray-800 mb-5 pl-2 py-1 rounded-sm" value={form.alt} onChange={(e) => setForm({ ...form, alt: e.target.value })}>
+                <option value="">Alt Class</option>
+                {CLASS_NAMES.map(({wowClass, value}) => <option key={value} value={value}>{wowClass}</option>)}
+            </select>
 
-              {WOW_CLASSES.map(({ wowClass, spec }) => (<option key={spec} value={spec} className="odd:bg-red-500 even:bg-red-200">{`${wowClass} - ${spec}`}</option>))}
-              </select> */}
-
-
+            <select id="role" className="bg-sky-900 text-gray-800 mb-5 pl-2 py-1 rounded-sm" value={form.role} onChange={(e) => setForm({...form, role: e.target.value})}>
+                <option value="">Role</option>
+                {ROLE_NAMES.map(({role}) => <option key={role} value={role}>{role}</option>)}
+            </select>
           </div>
 
           <div className="*:w-full *:mb-5 *:pl-2">

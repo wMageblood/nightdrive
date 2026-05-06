@@ -10,5 +10,6 @@ export const APPLY_PHRASES = [
   "conchesumare",
   "grump es el primer peruano con afro",
   "cara de mono resfriado",
-  "one apple a day keeps the doctor away"
+  "one apple a day keeps the doctor away",
+  "hola, soy kayn y raidee en poptar"
 ];
