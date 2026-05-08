@@ -5,7 +5,7 @@ import cors from "cors";
 import { Application } from "./models/applications"
 import normalizeString from "./utils/normalizeString";
 import { CLASS_EMOJIS, CLASS_COLORS, ROLE_EMOJIS, APPLY_PHRASES } from "./constants/embededMessageProperties"
-
+import { validateCharacter } from "./services/raiderIOService";
 
 const app = express();
 
@@ -29,8 +29,19 @@ app.post("/apply", async (req, res) => {
 
   try {
 
+
     const data = req.body;
     const saved = await Application.create(data);
+
+    const test = async () => {
+      validateCharacter({
+        name: data.name,
+        realm: data.realm
+      })
+    }
+
+    test();
+
 
     const mainIcon = CLASS_EMOJIS[data.main] || "mainIcon not found";
     const altIcon = CLASS_EMOJIS[data.alt] || "altIcon not found";
