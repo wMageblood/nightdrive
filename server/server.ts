@@ -29,13 +29,13 @@ app.post("/apply", async (req, res) => {
 
   try {
 
-    const data = req.body
+    const data = req.body;
     const saved = await Application.create(data);
 
     const mainIcon = CLASS_EMOJIS[data.main] || "mainIcon not found";
     const altIcon = CLASS_EMOJIS[data.alt] || "altIcon not found";
     const roleIcon = ROLE_EMOJIS[data.role] || "roleIcon not found";
-    const classColors = CLASS_COLORS[data.main] || "classColor not found";
+    const classColors = CLASS_COLORS[data.main] || 0xffffff;
     const randomPhrase = APPLY_PHRASES[Math.floor(Math.random() * APPLY_PHRASES.length)]
 
     await fetch(process.env.DISCORD_ASCENDED_WEBHOOK_URL!, {
@@ -48,7 +48,11 @@ app.post("/apply", async (req, res) => {
         embeds: [
           {
             title: `${data.name} - ${data.realm}`,
-            description: `<:raiderioicon:1500995575867248680>  [RaiderIO](https://www.raider.io/characters/us/${normalizeString(data.realm)}/${normalizeString(data.name)}) \n <:wlogsicon:1500994865356476577>  [Logs](https://www.warcraftlogs.com/character/us/${normalizeString(data.realm)}/${normalizeString(data.name)}) \n <:wowicon:1501033954080194660> [Armory](https://worldofwarcraft.com/en-us/character/us/${normalizeString(data.realm)}/${normalizeString(data.name)})`,
+            description: [
+              `<:raiderioicon:1500995575867248680> [RaiderIO](https://www.raider.io/characters/us/${normalizeString(data.realm)}/${normalizeString(data.name)})`,
+              `<:wlogsicon:1500994865356476577> [Logs](https://www.warcraftlogs.com/character/us/${normalizeString(data.realm)}/${normalizeString(data.name)})`,
+              `<:wowicon:1501033954080194660> [Armory](https://worldofwarcraft.com/en-us/character/us/${normalizeString(data.realm)}/${normalizeString(data.name)})`,
+            ].join("\n"),
             color: classColors,
             fields: [
               { name: "Main", value: `${mainIcon} ${data.main}`, inline: true },
