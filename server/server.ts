@@ -30,9 +30,10 @@ app.post("/apply", async (req, res) => {
 
 
     const data = req.body;
-    const saved = await Application.create(data);
 
     await validateCharacter({ name: data.name, realm: data.realm })
+
+    const saved = await Application.create(data);
 
     await sendWebhook(data)
 
