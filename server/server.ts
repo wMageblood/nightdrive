@@ -49,11 +49,11 @@ app.post("/apply", async (req, res) => {
   }
 })
 
-app.get("/", async (req, res) => {
+// app.get("/", async (req, res) => {
+//   res.send("server is running /roster")
+// });
 
-});
 
-
-app.get("/roster", (req, res) => {
-  res.send("server is running /roster")
-})
+// app.get("/roster", (req, res) => {
+//   res.send("server is running /roster")
+// })
