@@ -28,7 +28,6 @@ app.post("/apply", async (req, res) => {
 
   try {
 
-
     const data = req.body;
 
     await validateCharacter({ name: data.name, realm: data.realm })
@@ -50,8 +49,8 @@ app.post("/apply", async (req, res) => {
   }
 })
 
-app.get("/", (req, res) => {
-  res.send("server is running")
+app.get("/", async (req, res) => {
+
 });
 
 

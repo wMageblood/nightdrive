@@ -9,7 +9,7 @@ const MIDNIGHT_RAIDS = [
   { boss: "Vanguard", bossImage: MIDNIGHT.vanguard, defeated: true },
   { boss: "Crown", bossImage: MIDNIGHT.crown, defeated: true },
   { boss: "Beloren", bossImage: MIDNIGHT.beloren, defeated: true },
-  { boss: "Lura", bossImage: MIDNIGHT.lura, defeated: false },
+  { boss: "Lura", bossImage: MIDNIGHT.lura, defeated: true },
 ];
 
 export default MIDNIGHT_RAIDS;

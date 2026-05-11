@@ -23,6 +23,13 @@
   --color-gray-neutral-300: #f9f9f9;
   /* NEUTRAL COLORS */
 
+  /* INPUT FORM COLORS */
+
+  --color-inputForm-background: #171b27;
+  --color-inputForm-field: #1d2033;
+
+  /* INPUT FORM COLORS */
+
   /* PRIMARY COLORS */
 
   /* ACCENT COLORS */
@@ -228,6 +235,17 @@
   }
 }
 
-.options::picker {
+input, input::placeholder {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
+input:focus, select:focus {
+  outline: none;
+}
+
+option {
+  background-color: black;
+  font-weight: bold;
 }
