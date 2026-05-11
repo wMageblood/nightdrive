@@ -73,7 +73,7 @@ export const InputForm = () => {
             <input id="experience" className="" value={form.experience} onChange={(e) => setForm({ ...form, experience: e.target.value})} placeholder="Experiencia previa" type="text" />
             <input id="availability" className="" value={form.availability} onChange={(e) => setForm({ ...form, availability: e.target.value})} placeholder="Disponibilidad" type="text" />
             <input id="reasons" className="" value={form.reasons} onChange={(e) => setForm({ ...form, reasons: e.target.value})} placeholder="Razones para aplicar" type="text" />
-            <input id="contact" className="" value={form.contact} onChange={(e) => setForm({ ...form, contact: e.target.value})} placeholder="DISCORD" type="text" />
+            <input id="contact" className="" value={form.contact} onChange={(e) => setForm({ ...form, contact: e.target.value})} placeholder="DISCORD | BNET" type="text" />
           </div>
 
           <div>
