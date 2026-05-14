@@ -10,6 +10,7 @@ import cors from "cors";
 import { Application } from "./models/applications"
 import { validateCharacter } from "./services/raiderIOService";
 import { sendWebhook } from "./services/discordWebhookService";
+dotenv.config({ path: "./config.env" });
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3001;
@@ -17,7 +18,6 @@ const PORT = Number(process.env.PORT) || 3001;
 app.use(cors())
 app.use(express.json())
 
-dotenv.config({ path: "./config.env" });
 
 console.log("Starting server...");
 console.log("MONGO_URI exists:", !!process.env.MONGO_URI);
