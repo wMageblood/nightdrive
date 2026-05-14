@@ -7,6 +7,7 @@ import { validateCharacter } from "./services/raiderIOService";
 import { sendWebhook } from "./services/discordWebhookService";
 
 const app = express();
+const PORT = Number(process.env.PORT) || 3001;
 
 app.use(cors())
 app.use(express.json())
@@ -19,9 +20,9 @@ mongoose.connect(process.env.ATLAS_URI!)
   .catch((err) => console.error("❌ Mongo error:", err))
 
 
-app.listen(3001, () => {
-  console.log("server running on port 3001")
-})
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on ${PORT}`);
+});
 
 app.post("/apply", async (req, res) => {
 
