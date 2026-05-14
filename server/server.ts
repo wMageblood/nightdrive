@@ -10,13 +10,15 @@ import cors from "cors";
 import { Application } from "./models/applications"
 import { validateCharacter } from "./services/raiderIOService";
 import { sendWebhook } from "./services/discordWebhookService";
-dotenv.config({ path: "./config.env" });
+dotenv.config();
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3001;
 
 app.use(cors())
 app.use(express.json())
+
+console.log("ATLAS_URI:", process.env.ATLAS_URI);
 
 mongoose.connect(process.env.ATLAS_URI!)
   .then(() => console.log(" ✅ MongoDB connected"))
