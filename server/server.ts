@@ -1,3 +1,8 @@
+console.log("SERVER FILE STARTED");
+console.log("PORT:", process.env.PORT);
+console.log("MONGO_URI EXISTS:", !!process.env.MONGO_URI);
+console.log("WEBHOOK EXISTS:", !!process.env.DISCORD_ASCENDED_WEBHOOK_URL);
+
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
@@ -14,6 +19,9 @@ app.use(express.json())
 
 dotenv.config({ path: "./config.env" });
 
+console.log("Starting server...");
+console.log("PORT:", process.env.PORT);
+console.log("MONGO_URI exists:", !!process.env.MONGO_URI);
 
 mongoose.connect(process.env.ATLAS_URI!)
   .then(() => console.log(" ✅ MongoDB connected"))
