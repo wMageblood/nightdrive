@@ -20,7 +20,6 @@ app.use(express.json())
 dotenv.config({ path: "./config.env" });
 
 console.log("Starting server...");
-console.log("PORT:", process.env.PORT);
 console.log("MONGO_URI exists:", !!process.env.MONGO_URI);
 
 mongoose.connect(process.env.ATLAS_URI!)
