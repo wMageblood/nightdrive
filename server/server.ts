@@ -1,6 +1,6 @@
 console.log("SERVER FILE STARTED");
 console.log("PORT:", process.env.PORT);
-console.log("MONGO_URI EXISTS:", !!process.env.MONGO_URI);
+console.log("ATLAS_URI EXISTS:", !!process.env.ATLAS_URI);
 console.log("WEBHOOK EXISTS:", !!process.env.DISCORD_ASCENDED_WEBHOOK_URL);
 
 import express from "express";
