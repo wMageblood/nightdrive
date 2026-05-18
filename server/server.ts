@@ -22,7 +22,9 @@ console.log("ATLAS_URI:", process.env.ATLAS_URI);
 
 async function startServer() {
   try {
+    mongoose.set("bufferCommands", false);
     await mongoose.connect(process.env.ATLAS_URI!);
+    console.log("MONGO STATE:", mongoose.connection.readyState);
     console.log("✅ MongoDB connected");
 
     app.listen(PORT, "0.0.0.0", () => {
@@ -49,11 +51,11 @@ app.post("/apply", async (req, res) => {
 
     console.log("SAFE DATA:", safeData);
 
-    const saved = await Application.create(safeData);
+    console.log("ABOUT TO WRITE TO MONGO");
 
     return res.json({
       success: true,
-      data: saved,
+      data: "saved",
     });
 
   } catch (err) {
