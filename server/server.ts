@@ -44,13 +44,13 @@ app.post("/apply", async (req, res) => {
     console.log("RAW DATA:", data);
     // await validateCharacter({ name: data.name, realm: data.realm })
 
-    const saved = await Application.create(data);
+    // const saved = await Application.create(data);
 
     // await sendWebhook(data)
 
     res.json({
       success: true,
-      data: saved,
+      // data: saved,
     });
   } catch (err) {
     console.error(err);
