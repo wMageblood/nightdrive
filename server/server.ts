@@ -40,7 +40,8 @@ app.post("/apply", async (req, res) => {
 
     const saved = await Application.create(data);
 
-    await sendWebhook(data)
+    // await sendWebhook(data)
+
     res.json({
       success: true,
       data: saved,
