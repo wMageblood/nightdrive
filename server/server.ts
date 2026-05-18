@@ -50,7 +50,7 @@ app.post("/apply", async (req, res) => {
 
     res.json({
       success: true,
-      data: saved,
+      // data: saved,
     });
   } catch (err) {
     console.error(err);
