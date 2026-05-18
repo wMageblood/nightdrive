@@ -39,6 +39,9 @@ app.post("/apply", async (req, res) => {
 
     const data = req.body;
 
+    console.log("DATA TYPE:", typeof data);
+    console.log("DATA KEYS:", Object.keys(data));
+    console.log("RAW DATA:", data);
     // await validateCharacter({ name: data.name, realm: data.realm })
 
     const saved = await Application.create(data);
