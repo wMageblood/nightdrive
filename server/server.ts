@@ -10,6 +10,7 @@ import cors from "cors";
 import { Application } from "./models/applications"
 import { validateCharacter } from "./services/raiderIOService";
 import { sendWebhook } from "./services/discordWebhookService";
+import { createLogger } from "vite";
 dotenv.config();
 
 const app = express();
@@ -29,31 +30,37 @@ app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on ${PORT}`);
 });
 
-// app.post("/apply", async (req, res) => {
+app.post("/apply", async (req, res) => {
 
 
-//   try {
+  try {
 
-//     const data = req.body;
+    const data = req.body;
 
-//     await validateCharacter({ name: data.name, realm: data.realm })
+    await validateCharacter({ name: data.name, realm: data.realm })
 
-//     const saved = await Application.create(data);
+    console.log("before db");
 
-//     await sendWebhook(data)
+    const saved = await Application.create(data);
 
-//     res.json({
-//       success: true,
-//       data: saved,
-//     });
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).json({
-//       success: false,
-//       message: "failed to save application"
-//     });
-//   }
-// })
+    console.log(JSON.stringify(data))
+
+    console.log("after db stringify");
+
+    await sendWebhook(data)
+
+    res.json({
+      success: true,
+      data: saved,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      success: false,
+      message: "failed to save application"
+    });
+  }
+})
 
 app.get("/", async (req, res) => {
   res.send("server is alive")
