@@ -7,7 +7,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
-// import { Application } from "./models/applications"
+import { Application } from "./models/applications"
 import { validateCharacter } from "./services/raiderIOService";
 import { sendWebhook } from "./services/discordWebhookService";
 dotenv.config();
