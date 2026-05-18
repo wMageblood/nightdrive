@@ -51,7 +51,10 @@ app.post("/apply", async (req, res) => {
 
     console.log("SAFE DATA:", safeData);
 
-    console.log("ABOUT TO WRITE TO MONGO");
+    const doc = new Application(safeData);
+    console.log("MODEL CREATED");
+    const saved = await doc.save();
+    console.log("SAVE COMPLETED");
 
     return res.json({
       success: true,
