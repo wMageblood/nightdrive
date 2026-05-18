@@ -32,30 +32,51 @@ app.listen(PORT, "0.0.0.0", () => {
 app.post("/apply", async (req, res) => {
 
 
-
   try {
-
     console.log("HIT /apply");
 
-    const data = req.body;
+    const safeData = {
+      name: req.body.name,
+      realm: req.body.realm,
+    };
 
-    console.log("DATA TYPE:", typeof data);
-    console.log("DATA KEYS:", Object.keys(data));
-    console.log("RAW DATA:", data);
-    // await validateCharacter({ name: data.name, realm: data.realm })
+    console.log("SAFE DATA:", safeData);
 
-    // const saved = await Application.create(data);
+    const saved = await Application.create(safeData);
 
-    // await sendWebhook(data)
-
-    res.json({
+    return res.json({
       success: true,
-      // data: saved,
+      data: saved,
     });
+
   } catch (err) {
-    console.error(err);
-    return res.status(500).json({ ok: false })
+    console.error("MONGO ERROR:", err);
+    return res.status(500).json({ ok: false });
   }
+
+  // try {
+
+  //   console.log("HIT /apply");
+
+  //   const data = req.body;
+
+  //   console.log("DATA TYPE:", typeof data);
+  //   console.log("DATA KEYS:", Object.keys(data));
+  //   console.log("RAW DATA:", data);
+  //   await validateCharacter({ name: data.name, realm: data.realm })
+
+  //   const saved = await Application.create(data);
+
+  //   await sendWebhook(data)
+
+  //   res.json({
+  //     success: true,
+  //     data: saved,
+  //   });
+  // } catch (err) {
+  //   console.error(err);
+  //   return res.status(500).json({ ok: false })
+  // }
 })
 
 app.get("/", async (req, res) => {
