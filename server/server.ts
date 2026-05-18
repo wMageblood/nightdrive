@@ -34,10 +34,14 @@ app.post("/apply", async (req, res) => {
 
   try {
 
+    console.log("route entered");
+
     const data = req.body;
 
-    await validateCharacter({ name: data.name, realm: data.realm })
+    console.log("body assigned");
 
+    await validateCharacter({ name: data.name, realm: data.realm })
+    console.log("validated character")
     console.log("before db");
 
     // const saved = await Application.create(data);
