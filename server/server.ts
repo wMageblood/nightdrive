@@ -40,7 +40,7 @@ app.post("/apply", async (req, res) => {
 
     console.log("before db");
 
-    const saved = await Application.create(data);
+    // const saved = await Application.create(data);
 
     console.log(JSON.stringify(data))
 
