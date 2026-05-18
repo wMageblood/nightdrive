@@ -23,7 +23,7 @@ export const InputForm = () => {
   const data = form;
 
     try {
-      const res = await fetch("http://localhost:3001/apply", {
+      const res = await fetch("https://ascended.onrender.com/apply", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
