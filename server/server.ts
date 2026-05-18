@@ -32,37 +32,42 @@ app.listen(PORT, "0.0.0.0", () => {
 app.post("/apply", async (req, res) => {
 
 
-  try {
+  console.log("HIT /apply");
+  console.log(req.body);
 
-    console.log("route entered");
+  return res.json({ ok: true });
 
-    const data = req.body;
+  // try {
 
-    console.log("body assigned");
+  //   console.log("route entered");
 
-    await validateCharacter({ name: data.name, realm: data.realm })
-    console.log("validated character")
-    console.log("before db");
+  //   const data = req.body;
 
-    // const saved = await Application.create(data);
+  //   console.log("body assigned");
 
-    console.log(JSON.stringify(data))
+  //   await validateCharacter({ name: data.name, realm: data.realm })
+  //   console.log("validated character")
+  //   console.log("before db");
 
-    console.log("after db stringify");
+  //   const saved = await Application.create(data);
 
-    await sendWebhook(data)
+  //   console.log(JSON.stringify(data))
 
-    res.json({
-      success: true,
-      // data: saved,
-    });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({
-      success: false,
-      message: "failed to save application"
-    });
-  }
+  //   console.log("after db stringify");
+
+  //   await sendWebhook(data)
+
+  //   res.json({
+  //     success: true,
+  //     data: saved,
+  //   });
+  // } catch (err) {
+  //   console.error(err);
+  //   res.status(500).json({
+  //     success: false,
+  //     message: "failed to save application"
+  //   });
+  // }
 })
 
 app.get("/", async (req, res) => {
