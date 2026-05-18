@@ -36,12 +36,11 @@ app.post("/apply", async (req, res) => {
 
     const data = req.body;
 
-    await validateCharacter({ name: data.name, realm: data.realm })
+    // await validateCharacter({ name: data.name, realm: data.realm })
 
     const saved = await Application.create(data);
 
     await sendWebhook(data)
-
     res.json({
       success: true,
       data: saved,
