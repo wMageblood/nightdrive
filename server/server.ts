@@ -10,7 +10,6 @@ import cors from "cors";
 import { Application } from "./models/applications"
 import { validateCharacter } from "./services/raiderIOService";
 import { sendWebhook } from "./services/discordWebhookService";
-import { createLogger } from "vite";
 dotenv.config();
 
 const app = express();

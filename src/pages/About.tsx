@@ -17,7 +17,7 @@ const About = () => {
             Contamos con gente de cada rincon de latinoamerica, desde la seca y verdulera bolivia hasta la irrelevante y triste Uruguay, no nos olvidemos de Mexico donde sus raiders viven perdiendo la cabeza (literalmente).
             En Ascended nuestra meta siempre es la misma tratar de llegar al ultimo boss del parche antes de que se nos acaben las neuronas para poder esquivar el fuego y poder hacer la rotacion de 3 botones
              y no perder 300 puestos en el ranking mundial (aun no lo logramos).
-            Al final del dia nuestro sueño es poder ser tan felices en el juego como lo somos en la vida real <span className="decoration-dashed">(no lo somos)</span>.
+            Al final del dia nuestro sueño es poder ser tan felices en el juego como lo somos en la vida real <span className="">(no lo somos)</span>.
         </p>
       </div>
     </div>
