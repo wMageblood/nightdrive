@@ -27,7 +27,7 @@ app.post("/apply", async (req, res) => {
 
     const data = req.body;
 
-    // const saved = await Application.create(data);
+    const saved = await Application.create(data);
 
     res.json({ success: true });
   } catch (err) {
