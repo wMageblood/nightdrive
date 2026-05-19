@@ -26,8 +26,6 @@ export function getDataBase() {
     contact: { type: String, trim: true, maxlength: 50 },
   });
 
-
-
   return mongoose.model("Application", applicationSchema)
 
 }
