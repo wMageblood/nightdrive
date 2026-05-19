@@ -29,23 +29,11 @@ app.post("/apply", async (req, res) => {
 
     const saved = await Application.create(data);
 
-    console.log(data);
+    console.log(saved);
 
     res.json({ success: true });
   } catch (err) {
     console.error(err);
     return res.status(500).json({ ok: false })
   }
-})
-
-app.get("/", async (req, res) => {
-  res.send("server is alive")
-});
-
-app.get("/health", (req, res) => {
-  res.json({ status: "ok" });
-})
-
-app.get("/roster", (req, res) => {
-  res.send("server is running /roster")
 })
