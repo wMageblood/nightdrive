@@ -40,3 +40,7 @@ app.post("/apply", async (req, res) => {
     return res.status(200).json({ ok: false })
   }
 })
+
+app.get("/", (req, res) => {
+  return "/ route is alive"
+})
