@@ -15,7 +15,7 @@ console.log("ATLAS_URI:", process.env.ATLAS_URI);
 
 const startServer = async () => {
   try {
-    await mongoose.connect(process.env.ATLAS_URI!)
+    mongoose.connect(process.env.ATLAS_URI!)
     console.log(" ✅ MongoDB connected")
 
   } catch (err) {
