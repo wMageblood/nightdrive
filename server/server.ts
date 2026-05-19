@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
-import { Application } from "./models/applications"
+import { saveData } from "./models/applications";
 dotenv.config();
 
 const app = express();
@@ -27,7 +27,7 @@ app.post("/apply", async (req, res) => {
 
     const data = req.body;
 
-    const saved = await Application.create(data);
+    await saveData(data)
 
     res.json({ success: true });
   } catch (err) {
