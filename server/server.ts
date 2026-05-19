@@ -13,7 +13,7 @@ app.use(express.json())
 
 console.log("ATLAS_URI:", process.env.ATLAS_URI);
 
-await mongoose.connect(process.env.ATLAS_URI!)
+mongoose.connect(process.env.ATLAS_URI!)
   .then(() => console.log(" ✅ MongoDB connected"))
   .catch((err) => console.error("❌ MongoDB error:", err))
 
