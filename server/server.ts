@@ -13,23 +13,13 @@ app.use(express.json())
 
 console.log("ATLAS_URI:", process.env.ATLAS_URI);
 
-const startServer = async () => {
-  try {
-    mongoose.connect(process.env.ATLAS_URI!)
-    console.log(" ✅ MongoDB connected")
+mongoose.connect(process.env.ATLAS_URI!)
+  .then(() => console.log(" ✅ MongoDB connected"))
+  .catch((err) => console.error("❌ MongoDB error:", err))
 
-  } catch (err) {
-    console.error("❌ MongoDB error:", err)
-  }
-
-  app.listen(PORT, "0.0.0.0", () => {
-    console.log(`Server running on ${PORT}`);
-  });
-
-}
-
-startServer()
-
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on ${PORT}`);
+});
 
 app.post("/apply", async (req, res) => {
 
