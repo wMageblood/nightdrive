@@ -12,7 +12,7 @@ export interface applyProps {
   contact: string
 }
 
-function getDataBase() {
+export function getDataBase() {
 
   const applicationSchema = new mongoose.Schema({
     name: { type: String, trim: true },
@@ -30,10 +30,4 @@ function getDataBase() {
 
   return mongoose.model("Application", applicationSchema)
 
-}
-
-export async function saveData(data: applyProps) {
-  const db = getDataBase();
-  const apply = new db(data)
-  await apply.save()
 }
