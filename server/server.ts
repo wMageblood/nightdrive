@@ -11,7 +11,6 @@ const PORT = Number(process.env.PORT) || 3001;
 app.use(cors())
 app.use(express.json())
 
-
 console.log("ATLAS_URI:", process.env.ATLAS_URI);
 
 mongoose.connect(process.env.ATLAS_URI!)
