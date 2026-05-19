@@ -21,22 +21,22 @@ app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on ${PORT}`);
 });
 
-// app.post("/apply", async (req, res) => {
+app.post("/apply", async (req, res) => {
 
+  try {
 
-//   try {
+    const data = req.body;
 
+    // const saved = await Application.create(data);
 
-//     const data = req.body;
+    console.log(data);
 
-//     const saved = await Application.create(data);
-
-//     res.json({ success: true, data: saved, });
-//   } catch (err) {
-//     console.error(err);
-//     return res.status(500).json({ ok: false })
-//   }
-// })
+    res.json({ success: true });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ ok: false })
+  }
+})
 
 app.get("/", async (req, res) => {
   res.send("server is alive")
