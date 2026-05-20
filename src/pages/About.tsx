@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div>
       <Navbar />
-      <div className="flex items-center justify-center mb-10 mt-25 mx-10">
+      <div className="flex items-center justify-center mb-10 mt-25 xl:mx-0 mx-10">
         <AboutTitle />
       </div>
 
