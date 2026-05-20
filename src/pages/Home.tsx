@@ -15,7 +15,7 @@ const Home = () => {
           <AscendedTitle />
         </div>
       </div>
-        <div className="flex mx-auto justify-center  w-1/2 text-white mb-15 *:mx-15 bg-red-500">
+        <div className="flex mx-auto justify-center text-white mb-15 *:mx-15">
           <p className={`text-2xl font-bold font-Roboto text-nowrap`}>World: <span className={`${rankingColor(132)}`}>132</span></p>
           <p className={`text-2xl font-bold font-Roboto text-nowrap`}>Region: <span className={`${rankingColor(38)}`}>38</span></p>
           <p className={`text-2xl font-bold font-Roboto text-nowrap`}>Realm: <span className={`${rankingColor(1)}`}>1</span></p>
