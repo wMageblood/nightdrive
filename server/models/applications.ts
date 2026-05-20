@@ -15,15 +15,15 @@ export interface applyProps {
 export function getDataBase() {
 
   const applicationSchema = new mongoose.Schema({
-    name: { type: String, trim: true },
-    realm: { type: String, trim: true },
-    main: { type: String, trim: true },
-    alt: { type: String, trim: true },
-    role: { type: String, trim: false },
-    experience: { type: String, trim: true, maxlength: 150 },
-    availability: { type: String, trim: true, maxlength: 50 },
-    reasons: { type: String, trim: true, maxlength: 150 },
-    contact: { type: String, trim: true, maxlength: 50 },
+    name: { type: String, trim: true, required: true },
+    realm: { type: String, trim: true, required: true },
+    main: { type: String, trim: true, required: true },
+    alt: { type: String, trim: true, required: true },
+    role: { type: String, trim: false, required: true },
+    experience: { type: String, trim: true, maxlength: 150, required: true },
+    availability: { type: String, trim: true, maxlength: 50, required: true },
+    reasons: { type: String, trim: true, maxlength: 150, required: true },
+    contact: { type: String, trim: true, maxlength: 50, required: true },
   });
 
   return mongoose.model("Application", applicationSchema)
