@@ -42,5 +42,5 @@ app.post("/apply", async (req, res) => {
 })
 
 app.get("/", (req, res) => {
-  return "/ route is alive"
+  res.send("server is running /roster")
 })
