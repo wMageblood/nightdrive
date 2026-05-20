@@ -1,6 +1,6 @@
 export const MagiMark = () => {
   return (
-    <svg viewBox="-101 -63 400 400" className="w-100 opacity-60 blur-[2px] animate-fade-arcane">
+    <svg viewBox="-101 -63 400 400" className="w-100 mr-3 opacity-60 blur-[2px] animate-fade-arcane">
 
       <defs>
         <linearGradient id="arcaneEnergy" x1="0%" y1="0%" x2="100%" y2="100%">
