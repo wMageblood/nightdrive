@@ -34,6 +34,8 @@ app.post("/apply", async (req, res) => {
     const apply = new db(data)
     await apply.save()
 
+    sendWebhook(data);
+
     res.json({ success: true });
   } catch (err) {
     console.error(err);
