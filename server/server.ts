@@ -3,6 +3,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 import { getDataBase } from "./models/applications";
+import { validateCharacter } from "./services/raiderIOService";
+import { sendWebhook } from "./services/discordWebhookService";
 dotenv.config();
 
 const app = express();
@@ -10,8 +12,6 @@ const PORT = Number(process.env.PORT) || 3001;
 
 app.use(cors())
 app.use(express.json())
-
-console.log("ATLAS_URI:", process.env.ATLAS_URI);
 
 mongoose.connect(process.env.ATLAS_URI!)
   .then(() => console.log(" ✅ MongoDB connected"))
@@ -24,8 +24,6 @@ app.listen(PORT, "0.0.0.0", () => {
 });
 
 app.post("/apply", async (req, res) => {
-
-  console.log("joseph es gay y ruidoso")
 
   try {
 
