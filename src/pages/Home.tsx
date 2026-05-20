@@ -15,10 +15,10 @@ const Home = () => {
           <AscendedTitle />
         </div>
       </div>
-        <div className="flex mx-auto justify-center text-white mb-15 *:mx-15">
-          <p className={`text-2xl font-bold font-Roboto text-nowrap`}>World: <span className={`${rankingColor(132)}`}>132</span></p>
-          <p className={`text-2xl font-bold font-Roboto text-nowrap`}>Region: <span className={`${rankingColor(38)}`}>38</span></p>
-          <p className={`text-2xl font-bold font-Roboto text-nowrap`}>Realm: <span className={`${rankingColor(1)}`}>1</span></p>
+        <div className="flex justify-center *:xl:mx-15 *:mx-5 text-white mb-15">
+          <p className={`text-xl font-bold font-Roboto text-nowrap`}>World: <span className={`${rankingColor(132)}`}>132</span></p>
+          <p className={`text-xl font-bold font-Roboto text-nowrap`}>Region: <span className={`${rankingColor(38)}`}>38</span></p>
+          <p className={`text-xl font-bold font-Roboto text-nowrap`}>Realm: <span className={`${rankingColor(1)}`}>1</span></p>
         </div>
 
       <div className="grid xl:grid-cols-9 grid-cols-3 gap-1 justify-items-center">
