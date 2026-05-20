@@ -20,8 +20,6 @@ export const validateCharacter = async ({ name, realm }: characterProps) => {
       throw new Error('ilvl aint enough bitch')
     }
 
-    console.log(data.gear?.item_level_equipped)
-
   } catch (err) {
     throw new Error('Character wasnt valid.')
   }

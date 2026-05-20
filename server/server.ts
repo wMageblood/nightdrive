@@ -43,14 +43,14 @@ app.post("/apply", async (req, res) => {
   }
 })
 
-app.get("/", (req, res) => {
-  res.send("server is running /")
-})
+// app.get("/", (req, res) => {
+//   res.send("server is running /")
+// })
 
-app.get("/about", (req, res) => {
-  res.send("server is running /about")
-})
+// app.get("/about", (req, res) => {
+//   res.send("server is running /about")
+// })
 
-app.get("/roster", (req, res) => {
-  res.send("server is running /roster")
-})
+// app.get("/roster", (req, res) => {
+//   res.send("server is running /roster")
+// })
