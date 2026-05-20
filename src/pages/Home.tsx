@@ -9,9 +9,9 @@ const Home = () => {
   return (
     <div className="">
       <Navbar />
-      <div className="relative flex items-center justify-center mb-10 mt-25">
+      <div className="relative flex items-center justify-center mb-10 mt-10">
           <MagiMark />
-        <div className="absolute font-Roboto text-9xl text-title font-bold tracking-tighter ">
+        <div className="absolute">
           <AscendedTitle />
         </div>
       </div>
@@ -21,8 +21,8 @@ const Home = () => {
           <p className={`text-xl font-bold font-Roboto text-nowrap`}>Realm: <span className={`${rankingColor(1)}`}>1</span></p>
         </div>
 
-      <div className="grid xl:grid-cols-9 grid-cols-3 gap-1 justify-items-center">
-        {MIDNIGHT_RAIDS.map(({bossImage, defeated, boss}) => (<img key={boss} className={`${defeated ? "saturate-5" : null} min-w-35 w-35 min-h-40 h-40`} src={bossImage} />))}
+      <div className="grid xl:grid-cols-9 grid-cols-3 justify-items-center">
+        {MIDNIGHT_RAIDS.map(({bossImage, defeated, boss}) => (<img key={boss} className={`${defeated ? "saturate-5" : null} min-w-32 w-32 min-h-37 h-37 mb-3`} src={bossImage} />))}
       </div>
     </div>
   );
