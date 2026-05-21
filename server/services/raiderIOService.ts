@@ -20,6 +20,7 @@ export const validateCharacter = async ({ name, realm }: characterProps) => {
       if (data.mythic_plus_scores_by_season.scores.all >= 3000) {
         throw new Error('bro, validation error.')
       }
+      throw new Error('ilvl wasnt enough bro')
     }
 
   } catch (err) {
