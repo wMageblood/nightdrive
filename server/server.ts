@@ -29,12 +29,12 @@ app.post("/apply", async (req, res) => {
 
     const data = req.body;
 
-    validateCharacter({ name: data.name, realm: data.realm })
+    await validateCharacter({ name: data.name, realm: data.realm })
 
     const apply = new db(data)
     await apply.save()
 
-    sendWebhook(data);
+    await sendWebhook(data);
 
     res.json({ success: true });
   } catch (err) {
