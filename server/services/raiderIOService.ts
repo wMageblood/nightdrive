@@ -17,7 +17,8 @@ export const validateCharacter = async ({ name, realm }: characterProps) => {
     const data = await response.json()
 
     if (data.gear?.item_level_equipped <= 279) {
-      throw new Error('bro, validation error.')
+      if (data.mythic_plus_scores_by_season?.[0]?.scores?.all <= 2700)
+        throw new Error('bro, validation error.')
     }
 
   } catch (err) {
