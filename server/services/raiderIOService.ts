@@ -22,10 +22,6 @@ export const validateCharacter = async ({ name, realm }: characterProps) => {
       }
     }
 
-    if
-
-
-
   } catch (err) {
     throw new Error('Character wasnt valid.')
   }
