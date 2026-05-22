@@ -1,6 +1,6 @@
 export const PLAYER_INFORMATION = [
   { rank: "Líder Doblado", name: "Overseer", description: "", mainClass: "hunter" },
-  { rank: "Rodando llego más rápido", name: "Kayn", description: "Con sus poderosísimos 135kg, 160CM de altura arrasa (literalmente) con todos los bosses que se encuentre.", mainClass: "paladin" },
+  { rank: "Rodando llego más rápido", name: "Kayn", description: "Con sus poderosísimos 135kg y 160CM de altura: arrasa (literalmente) con todos los bosses que se encuentre.", mainClass: "paladin" },
   { rank: "Mago", name: "Grump", description: "", mainClass: "paladin" },
   // { rank: "-", name: "Abu", description: "", mainClass: "druid" },
   { rank: "30 años jugando mago", name: "Airak", description: "", mainClass: "mage" },
@@ -20,7 +20,7 @@ export const PLAYER_INFORMATION = [
   { rank: "ni idea", name: "Mntsu", description: "", mainClass: "monk" },
   { rank: "Xmog Police Member", name: "Nekon", description: "", mainClass: "rogue" },
   { rank: "Cat Hoarder", name: "Pansito", description: "", mainClass: "dh" },
-  { rank: "INTERPRETER", name: "Sakimo", description: "", mainClass: "dk" },
+  { rank: "Intérprete oficial de la guild", name: "Sakimo", description: "", mainClass: "dk" },
   { rank: "Xmog Police Member", name: "Wizza", description: "", mainClass: "warrior" },
   { rank: "Ignora a Kayn", name: "🫏", description: "", mainClass: "shaman" },
 ];
