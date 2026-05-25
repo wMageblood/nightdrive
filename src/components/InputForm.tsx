@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CLASS_NAMES, ROLE_NAMES } from "../../server/constants/embededMessageProperties"
+import { CLASS_NAMES, ROLE_NAMES } from "../constants/wowIcons"
 import { REALM_LIST } from "../constants/realmList";
 
 const initialState = { name: "", realm: "", main: "", alt: "", role: "", experience: "", availability: "", reasons: "", contact: "" };
