@@ -1,4 +1,5 @@
 import * as CLASSES from "../assets/smallClassIcons/smallClassIcons"
+import * as ROLE_ICONS from "../assets/roleIcons/roleIcons"
 
 export const CLASS_NAMES = [
   { wowClass: "DK", value: "DK", icon: CLASSES.dkIcon },
@@ -17,7 +18,7 @@ export const CLASS_NAMES = [
 ];
 
 export const ROLE_NAMES = [
-  { value: "Tank", icon: "src/assets/roleIcons/tank-png.png" },
-  { value: "Healer", icon: "src/assets/roleIcons/healer-png.png" },
-  { value: "DPS", icon: "src/assets/roleIcons/dps-png.png" },
+  { value: "Tank", icon: ROLE_ICONS.tankIcon },
+  { value: "Healer", icon: ROLE_ICONS.healerIcon },
+  { value: "DPS", icon: ROLE_ICONS.dpsIcon },
 ];
