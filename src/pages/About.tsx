@@ -12,7 +12,7 @@ const About = () => {
       <div className="*:text-center *:text-title *:font-600 w-3/4 mx-auto">
         <p className="my-5">
           Ascended es una guild formada por players experimentados y consolidados en el raideo mítico latinoamericano. <br/>
-          Tenemos estrellas de talla internacional (por lo gordo) como Kayn; el enano más marrón de Bariloche, Wizza; el mago de Grump (desaparece cada semana) y, por supuesto, su chileno favorito con olor a resfriado y cara de mono, Over. <br/>
+          Tenemos estrellas de talla internacional <span className="underline text-highlightColor3">(por lo gordo)</span> como Kayn; el enano más marrón de Bariloche, Wizza; el mago de Grump <span className="text-highlightColor3 underline">(desaparece cada semana)</span> y, por supuesto, su chileno favorito con olor a resfriado y cara de mono, Over. <br/>
         </p>
         <p className="my-5">
           Juntos han logrado domesticar latinos salvajes, peinarlos, bañarlos y enseñarles a prender una computadora para poder completar su roster de raideo.

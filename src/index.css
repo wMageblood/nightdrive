@@ -2,79 +2,89 @@
 @import "tailwindcss";
 
 :root {
-  background: radial-gradient(circle at top, #0a0f12, #020304);
+  /* background: radial-gradient(circle at top, #0A0F12, #020304); */
+  background: #030712;
   background-repeat: no-repeat;
-  background-size: cover;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 @theme {
-  /* PRIMARY COLORS */
 
-    --color-title: #f3f4f6;
+    --color-title:                #F3F4F6;
+    --color-cssBackground:        #0A0F12;
+    /* --color-inputForm-field:      #1D2033; */
+    --color-cssBackgroundFinal:   #020304;
+    /* --color-inputForm-background: #171B27; */
 
-  /* CSS COLOR */
+    --color-inputFormIconBg:      #2E313A;
+    --color-inputFormElements:    #88898F;
+    --color-inputFormBackground:  #10141E;
 
-    --color-cssBackground: #0a0f12;
-    --color-cssBackgroundFinal: #020304;
+    --color-headerHoverColor:     #E9EFF1;
+    --color-headerDefaultColor:   #9c9c9c;
+    --color-supportiveTextColor:  #8E96A4;
 
-  /* NEUTRAL COLORS */
-    --color-gray-neutral-900: #232834;
-    --color-gray-neutral-800: #5f6a7b;
-    --color-gray-neutral-700: #8895a5;
-    --color-gray-neutral-600: #b7c6cf;
-    --color-gray-neutral-500: #cfd6df;
-    --color-gray-neutral-400: #e3e7ef;
-    --color-gray-neutral-300: #f9f9f9;
-  /* NEUTRAL COLORS */
+    --color-highlightColor1:      #00BCFF;
+    --color-highlightColor2:      #A684FF;
+    --color-highlightColor3:      #8685EF;
+    --color-highlightColor4:      #F261B1;
 
-  /* WINTER CHILL */
-    --color-winterChill-900: #0B2E33;
-    --color-winterChill-800: #4F7C82;
-    --color-winterChill-700: #93B1B5;
-    --color-winterChill-600: #B8E3E9;
-  /* WINTER CHILL */
+    --color-red-accent-300:       #FDE8E9;
+    --color-red-accent-400:       #F3AAAA;
+    --color-red-accent-500:       #E26460;
+    --color-red-accent-600:       #DC2F2F;
+    --color-red-accent-700:       #B91F1E;
+    --color-red-accent-800:       #8A1A17;
+    --color-red-accent-900:       #611719;
 
-  /* INPUT FORM COLORS */
-    --color-inputForm-background: #171b27;
-    --color-inputForm-field: #1d2033;
-  /* INPUT FORM COLORS */
+    --color-cyan-accent-300:      #E6FFFF;
+    --color-cyan-accent-400:      #A8EFEC;
+    --color-cyan-accent-500:      #6DD7D3;
+    --color-cyan-accent-600:      #3CADA5;
+    --color-cyan-accent-700:      #299187;
+    --color-cyan-accent-800:      #1B655C;
+    --color-cyan-accent-900:      #124544;
 
-  /* PRIMARY COLORS */
+    --color-gray-neutral-300:     #F9F9F9;
+    --color-gray-neutral-400:     #E3E7Ef;
+    --color-gray-neutral-500:     #CFD6DF;
+    --color-gray-neutral-600:     #B7C6CF;
+    --color-gray-neutral-700:     #8895A5;
+    --color-gray-neutral-800:     #5F6A7B;
+    --color-gray-neutral-900:     #232834;
 
-  /* ACCENT COLORS */
-  /* CYAN ACCENT COLORS */
-    --color-cyan-accent-900: #124544;
-    --color-cyan-accent-800: #1b655c;
-    --color-cyan-accent-700: #299187;
-    --color-cyan-accent-600: #3cada5;
-    --color-cyan-accent-500: #6dd7d3;
-    --color-cyan-accent-400: #a8efec;
-    --color-cyan-accent-300: #e6ffff;
-  /* CYAN ACCENT COLORS */
+    --color-yellow-accent-300:    #FFFDF5;
+    --color-yellow-accent-400:    #FAF3D4;
+    --color-yellow-accent-500:    #FAE39F;
+    --color-yellow-accent-600:    #F4C964;
+    --color-yellow-accent-700:    #CAA53D;
+    --color-yellow-accent-800:    #8A6C1E;
+    --color-yellow-accent-900:    #5B480F;
 
-  /* YELLOW ACCENT COLORS */
-    --color-yellow-accent-900: #5b480f;
-    --color-yellow-accent-800: #8a6c1e;
-    --color-yellow-accent-800: #caa53d;
-    --color-yellow-accent-600: #f4c964;
-    --color-yellow-accent-500: #fae39f;
-    --color-yellow-accent-400: #faf3d4;
-    --color-yellow-accent-300: #fffdf5;
-  /* YELLOW ACCENT COLORS */
+    --color-dk:                   #C41E3A;
+    --color-dh:                   #A330C9;
+    --color-mage:                 #3FC7EB;
+    --color-monk:                 #00FF98;
+    --color-druid:                #FF7C0A;
+    --color-rogue:                #FFF468;
+    --color-hunter:               #AAD372;
+    --color-evoker:               #33937F;
+    --color-priest:               #FFFFFF;
+    --color-shaman:               #0070DD;
+    --color-paladin:              #F48CBA;
+    --color-warrior:              #C69B6D;
+    --color-warlock:              #8788EE;
 
-  /* RED ACCENT COLORS */
-    --color-red-accent-900: #611719;
-    --color-red-accent-800: #8a1a17;
-    --color-red-accent-700: #b91f1e;
-    --color-red-accent-600: #dc2f2f;
-    --color-red-accent-500: #e26460;
-    --color-red-accent-400: #f3aaaa;
-    --color-red-accent-300: #fde8e9;
-  /* RED ACCENT COLORS */
-  /* ACCENT COLORS */
+    --color-poor:                 #9D9D9D;
+    --color-rare:                 #0070DD;
+    --color-epic:                 #A335EE;
+    --color-artifact:             #E6CC80;
+    --color-heirloom:             #00CCFF;
+    --color-uncommon:             #1EFF00;
+    --color-legendary:            #FF8000;
 
-  /* FONT WEIGHTS */
+
     --font-weight-100: 100;
     --font-weight-200: 200;
     --font-weight-300: 300;
@@ -84,41 +94,15 @@
     --font-weight-700: 700;
     --font-weight-800: 800;
     --font-weight-900: 900;
-  /* FONT WEIGHTS */
 
-  /* CLASS COLORS */
-    --color-dk: #C41E3A;
-    --color-dh: #A330C9;
-    --color-druid: #FF7C0A;
-    --color-evoker: #33937F;
-    --color-hunter: #AAD372;
-    --color-mage: #3FC7EB;
-    --color-monk: #00FF98;
-    --color-paladin: #F48CBA;
-    --color-priest: #FFFFFF;
-    --color-rogue: #FFF468;
-    --color-shaman: #0070DD;
-    --color-warlock: #8788EE;
-    --color-warrior: #C69B6D;
-  /* CLASS COLORS */
-
-  /* QUALITY COLORS */
-    --color-poor: #9d9d9d;
-    --color-uncommon: #1eff00;
-    --color-rare: #0070dd;
-    --color-epic: #a335ee;
-    --color-legendary: #ff8000;
-    --color-artifact: #e6cc80;
-    --color-heirloom: #00ccff;
-  /* QUALITY COLORS */
-
-  /* MISC */
-    --shadow-3xl: inset 0 -2px 2px hsla(0, 0%, 0%, 0.1);
-    --inset-shadow-md: inset 0 -1px 2px rgba(0, 0, 0, 0.25);
-    --inset-shadow-lg: inset 0 -2px 3px rgba(0, 0, 0, 0.35);
     --font-Geist: "Geist", sans-serif;
     --font-Roboto: "Roboto", sans-serif;
-  /* MISC */
+
+    --shadow-3xl: 0 2px 2px hsla(0, 0%, 0%, 1);
+    --shadow-red-3xl: 0 2px 2px hsla(0, 100%, 50%, 1);
+    --shadow-3xl-inset: inset 0 -2px 2px hsla(0, 0%, 0%, 0.1);
+    --inset-shadow-md: inset 0 -1px 2px rgba(0, 0, 0, 0.25);
+    --inset-shadow-lg: inset 0 -2px 3px rgba(0, 0, 0, 0.35);
 
 }
 
@@ -205,8 +189,8 @@
 
 #page-title path {
   fill: transparent;
-  stroke: #FFFFFF;
-  stroke-width: 2px;
+  stroke: #CAD0D3;
+  stroke-width: 3px;
   stroke-dasharray: 470;
   stroke-dashoffset: 0;
   animation: TextAnimation 3s ease-in-out 1 forwards;
@@ -222,7 +206,7 @@
   }
 
   100% {
-    fill: #FFFFFF;
+    fill: #CAD0D3;
     stroke-dashoffset: 0;
   }
 }
@@ -257,16 +241,6 @@
   }
 }
 
-input, input::placeholder {
-  color: black;
-  /* text-transform: uppercase; */
-  font-weight: bold;
-}
-
-input:focus, select:focus {
-  outline: none;
-}
-
-option.realm {
-  font-weight: bold;
+.option {
+  background-color: red;
 }

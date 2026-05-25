@@ -21,8 +21,8 @@ const Home = () => {
           <p className={`text-xl font-bold font-Roboto text-nowrap`}>Realm: <span className={`${rankingColor(1)}`}>1</span></p>
         </div>
 
-      <div className="grid xl:grid-cols-9 grid-cols-3 justify-center mx-auto xl:gap-3 gap-0 w-fit px-3 py-4">
-        {MIDNIGHT_RAIDS.map(({bossImage, defeated, boss}) => (<img key={boss} className={`${defeated ? "saturate-5" : null} min-w-32 w-32 min-h-37 h-37`} src={bossImage} />))}
+      <div className="grid xl:grid-cols-9 md:grid-cols-5 gap-px grid-cols-3 justify-center mx-auto w-fit px-3 py-4">
+          {MIDNIGHT_RAIDS.map(({bossImage, defeated, boss}) => ( <img key={boss} className={`relative ${defeated ? "saturate-5" : null} min-w-32 w-32 min-h-37 h-37`} src={bossImage} /> ))}
       </div>
     </div>
   );
