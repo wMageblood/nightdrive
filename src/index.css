@@ -2,7 +2,6 @@
 @import "tailwindcss";
 
 :root {
-  /* background: radial-gradient(circle at top, #0A0F12, #020304); */
   background: #030712;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -13,9 +12,7 @@
 
     --color-title:                #F3F4F6;
     --color-cssBackground:        #0A0F12;
-    /* --color-inputForm-field:      #1D2033; */
     --color-cssBackgroundFinal:   #020304;
-    /* --color-inputForm-background: #171B27; */
 
     --color-inputFormIconBg:      #2E313A;
     --color-inputFormElements:    #88898F;
@@ -106,13 +103,27 @@
 
 }
 
+
+.input-form-button {
+    @apply w-full rounded-full border border-inputFormElements h-10 px-4 text-left text-inputFormElements bg-inputFormBackground shadow-3xl
+  }
+
+.input-form-styling {
+    @apply bg-inputFormBackground border shadow-3xl w-full border-inputFormElements text-inputFormElements focus:outline-0 rounded-full h-10 mx-auto pl-4 pr-10 pb-px
+}
+
+.input-form-dropdown {
+  @apply px-4 py-3 text-inputFormElements hover:bg-white/10 cursor-pointer transition-colors flex
+}
+
+.input-form-dropdown-body {
+  @apply max-h-64 overflow-y-auto absolute w-[90%] rounded-b-2xl border-l border-r border-b right-[5%] -mt-[px] border-inputFormElements bg-inputFormBackground overflow-hidden shadow-3xl
+}
+
 .button-delete-primary {
   @apply bg-red-500;
 }
-/*
-.bg-arcane-dark {
-  @apply linear-gradient(to bottom, #0a0f12, #020304);
-} */
+
 
 @keyframes drawFast {
   0% {
@@ -243,4 +254,8 @@
 
 .option {
   background-color: red;
+}
+
+input:invalid {
+  outline-color: red;
 }
