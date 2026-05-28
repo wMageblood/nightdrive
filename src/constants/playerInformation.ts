@@ -4,7 +4,7 @@ export const PLAYER_INFORMATION = [
   { rank: "Mago", name: "Grump", description: "", mainClass: "paladin" },
   // { rank: "-", name: "Abu", description: "", mainClass: "druid" },
   { rank: "30 años jugando mago", name: "Airak", description: "", mainClass: "mage" },
-  { rank: "Full DPS (cuando está muerto)", name: "Ale", description: "", mainClass: "priest" },
+  { rank: "Sabes que se murió porque escuchaste un ruido", name: "Ale", description: "", mainClass: "priest" },
   { rank: "ni idea", name: "Aruh", description: "", mainClass: "hunter" },
   { rank: "Amigo de Monny", name: "Damba", description: "", mainClass: "warlock" },
   { rank: "Su dolor más grande es jugar Aug", name: "Dani", description: "", mainClass: "evoker" },
