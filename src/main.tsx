@@ -15,4 +15,4 @@ createRoot(document.getElementById('root')!).render(
       <Route path="/apply" element={<Apply />} />
     </Routes>
   </BrowserRouter>,
-)
+);

@@ -3,7 +3,6 @@ import type React from "react"
 interface helpIconProps {
   zIndex?: string,
   fieldDescription: React.ReactNode;
-
 }
 
 export const HelpIcon = ({zIndex, fieldDescription}: helpIconProps) => {
@@ -17,6 +16,5 @@ export const HelpIcon = ({zIndex, fieldDescription}: helpIconProps) => {
           {fieldDescription}
       </div>
     </div>
-
   )
-}
+};
