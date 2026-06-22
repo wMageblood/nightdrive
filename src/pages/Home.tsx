@@ -1,28 +1,24 @@
 import Navbar from "../components/Navbar";
-import MIDNIGHT_RAIDS from "../constants/midnightRaids";
-import { AscendedTitle } from "../components/svg/AscendedTitle";
-import { MagiMark } from "../components/svg/MagiMark";
-import { rankingColor } from "../utils/rankingColor";
+import mainBanner from "../assets/Rectangle 171.png"
+import { CurrentProgress } from "../components/CurrentProgression";
+import { RecruitmentStatus } from "../components/RecruitmentStatus";
+import { RaidHistory } from "../components/RaidHistory";
 
 const Home = () => {
 
   return (
-    <div className="">
-      <Navbar />
-      <div className="relative flex items-center justify-center mb-10 mt-10">
-          <MagiMark />
-        <div className="absolute">
-          <AscendedTitle />
-        </div>
-      </div>
-        <div className="flex justify-center *:xl:mx-15 *:mx-5 text-white mb-15">
-          <p className={`text-xl font-bold font-Roboto text-nowrap`}>World: <span className={`${rankingColor(132)}`}>132</span></p>
-          <p className={`text-xl font-bold font-Roboto text-nowrap`}>Region: <span className={`${rankingColor(38)}`}>38</span></p>
-          <p className={`text-xl font-bold font-Roboto text-nowrap`}>Realm: <span className={`${rankingColor(1)}`}>1</span></p>
-        </div>
+    <div className="w-[85%] mx-auto">
 
-      <div className="grid xl:grid-cols-9 md:grid-cols-5 gap-px grid-cols-3 justify-center mx-auto w-fit px-3 py-4">
-          {MIDNIGHT_RAIDS.map(({bossImage, defeated, boss}) => ( <img key={boss} className={`relative ${defeated ? "saturate-5" : null} min-w-32 w-32 min-h-37 h-37`} src={bossImage} /> ))}
+      <Navbar />
+
+      <div className='mt-10'>
+        <img className='w-full border border-[#181b28] rounded-md' src={mainBanner} />
+      </div>
+
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-6'>
+        <CurrentProgress />
+        <RecruitmentStatus />
+        <RaidHistory />
       </div>
     </div>
   );

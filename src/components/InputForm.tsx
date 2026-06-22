@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { STATUS_MESSAGES } from "../constants/statusMessage"
+import { STATUS_MESSAGES } from "../constants/statusMessage";
 import { FIELD_DESCRIPTIONS } from "../constants/formFields";
 import { InputFormField } from "./inputFormFields/InputFormField";
 import { RealmFormField } from "./inputFormFields/RealmFormField";
-import { CLASS_NAMES, ROLE_NAMES } from "../constants/wowConstants"
-import { SubmitButton } from "../components/inputFormFields/SubmitButton"
-import { ButtonFormField } from "../components/inputFormFields/ButtonFormField"
+import { CLASS_NAMES, ROLE_NAMES } from "../constants/wowConstants";
+import { SubmitButton } from "../components/inputFormFields/SubmitButton";
+import { ButtonFormField } from "../components/inputFormFields/ButtonFormField";
 
 const initialState = { name: "", realm: "", main: "", alt: "", role: "", experience: "", availability: "", reasons: "", contact: "" };
 

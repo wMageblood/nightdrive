@@ -1,0 +1,58 @@
+export const RAID_RANKINGS = [
+  {
+    expansionName: `Midnight`,
+    raidName: `TVA`,
+    worldRank: `TBD`,
+    regionRank: `TBD`,
+    realmRank: `TBD`,
+  },
+  {
+    expansionName: `Midnight`,
+    raidName: `VR / DR / MQD`,
+    worldRank: 125,
+    regionRank: 35,
+    realmRank: 1,
+  },
+  {
+    expansionName: `TWW`,
+    raidName: `MFO`,
+    worldRank: 149,
+    regionRank: 48,
+    realmRank: 1,
+  },
+  {
+    expansionName: `TWW`,
+    raidName: `LoU`,
+    worldRank: 104,
+    regionRank: 28,
+    realmRank: 1,
+  },
+  {
+    expansionName: `TWW`,
+    raidName: `NP`,
+    worldRank: 104,
+    regionRank: 31,
+    realmRank: 1,
+  },
+  {
+    expansionName: `DF`,
+    raidName: `Amirdrassil`,
+    worldRank: 197,
+    regionRank: 57,
+    realmRank: 1,
+  },
+  {
+    expansionName: `DF`,
+    raidName: `Aberrus`,
+    worldRank: 116,
+    regionRank: 35,
+    realmRank: 1,
+  },
+  {
+    expansionName: `DF`,
+    raidName: `VoTI`,
+    worldRank: 1311,
+    regionRank: 496,
+    realmRank: 13,
+  },
+];
