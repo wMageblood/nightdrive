@@ -1,34 +1,32 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
-import { PlayerCard } from "../components/PlayerCard";
-import { PLAYER_INFORMATION } from "../constants/playerInformation";
-import { RosterTitle } from "../components/svg/RosterTitle";
 import { RoleCard } from "../components/RoleCard/RoleCard"
-import { ClassStats } from "../components/ClassStats/ClassStats.tsx"
+import { RoleFilter } from "../components/RoleFilter";
+import { PlayerCard } from "../components/PlayerCard";
 
 
 const Roster = () => {
 
-  const [selectedClass, setSelectedClass] = useState<string | null>(null);
+  const [selectedFilter, setSelectedFilter] = useState<string | null>(null);
 
   return (
-    <div>
+    <div className='w-[85%] mx-auto'>
       <Navbar />
 
-      <div className="flex justify-center mb-10 mt-25">
-        <RosterTitle />
+      <div className='mt-10'>
+        <RoleCard />
       </div>
 
-      <RoleCard />
+      <h1 className='text-2xl text-[#cad0d3] font-Rajdhani font-semibold text-center mt-10'></h1>
 
-
-      <ClassStats
-        selectedClass={selectedClass}
-        setSelectedClass={setSelectedClass}
-      />
-      <div>
-        <PlayerCard selectedClass={selectedClass} />
+      <div className='mt-10'>
+        <RoleFilter selectedFilter={selectedFilter} setSelectedFilter={setSelectedFilter}/>
       </div>
+
+      <div className='mt-10'>
+        <PlayerCard selectedFilter={selectedFilter} />
+      </div>
+
     </div>
   );
 };

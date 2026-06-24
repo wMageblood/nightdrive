@@ -6,7 +6,7 @@ export const RaidHistory = () => {
     <div className='*:font-Rajdhani *:font-semibold mx-auto mb-10 w-full shadow-soft-blur'>
           <div className="flex items-center justify-between border-l border-t border-r border-slate-800 px-6 py-4 bg-[#0e1220] rounded-tr-md rounded-tl-md ">
             <div className='text-[#c9cfd2] text-lg mr-10'>
-              <p className='text-xl'>PREVIOUS RANKS:</p>
+              <p className='text-xl'>RANKS ANTERIORES:</p>
             </div>
           </div>
           <div className='bg-[#0e1220] text-[#d9d4c5] border border-slate-800 px-6 pt-4 pb-2 rounded-br-md rounded-bl-md overflow-y-auto h-120 max-h-120 scrollbar-thin scrollbar-thumb-[#1d293d] scrollbar-track-[#0e1220]'>

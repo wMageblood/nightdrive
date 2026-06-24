@@ -1,22 +1,22 @@
 import { PLAYER_INFORMATION } from "../constants/playerInformation.tsx";
 import { classColor } from "../utils/classColor";
 import { motion } from "framer-motion"
-import { AnimatePresence } from "framer-motion";
+import wLogsLogo from "../assets/wLogsLogo.png"
+import wowLogo from "../assets/wowLogo.png"
+import raiderIoLogo from "../assets/raiderIoLogo.png"
 
 interface PlayerStatsProps {
-  selectedClass: string | null;
-  filteredRole?: string | null;
+  selectedFilter: string | null;
 }
 
-export const PlayerCard = ({selectedClass, filteredRole}: PlayerStatsProps) => {
+export const PlayerCard = ({selectedFilter}: PlayerStatsProps) => {
 
-    const filteredPlayersTwo = selectedClass ? PLAYER_INFORMATION.filter(player => player.tags.some(tag => tag.label === selectedClass )) : PLAYER_INFORMATION;
-
+    const filteredPlayers = selectedFilter ? PLAYER_INFORMATION.filter(player => player.tags.some(tag => tag.label === selectedFilter )) : PLAYER_INFORMATION;
 
   return (
-    <div className='w-[85%] md:w-[80%] xl:w-[90%] mx-auto flex flex-wrap justify-center gap-6 mb-8'>
-      {filteredPlayersTwo.map(({name, rank, description, mainClass, mainRole, tags, image}) => (
-        <motion.div key={name} initial={{ opacity: 0}} animate={{ opacity: 1}} exit={{ opacity: 0}} transition={{duration: 0.35}} style={{backgroundImage: `url(${image})`, backgroundPosition: "center 50%"}} className={`p-4 min-w-64 md:min-w-85 min-h-120 flex flex-col justify-end rounded-md inset-shadow-lg bg-cover bg-center border transition duration-300 ease-in-out ${classColor[mainClass.toLowerCase()].border} ${classColor[mainClass.toLowerCase()].shadow}`}>
+    <div className='flex flex-wrap justify-center mb-8 gap-4'>
+      {filteredPlayers.map(({name, mainClass, characterName, characterRealm, tags, image}) => (
+        <motion.div key={name} initial={{ opacity: 0}} animate={{ opacity: 1}} exit={{ opacity: 0}} transition={{duration: 0.35}} style={{backgroundImage: `url(${image})`, backgroundPosition: "center 50%"}} className={`p-4 min-w-64 relative md:min-w-85 min-h-120 flex flex-col justify-end rounded-md inset-shadow-lg bg-cover bg-center border transition duration-300 ease-in-out ${classColor[mainClass.toLowerCase()].border} ${classColor[mainClass.toLowerCase()].shadow}`}>
           <h2 className='text-3xl text-[#cad0d3] font-semibold tracking-tighter'>{name}</h2>
           <div className='flex'>
             {tags.map(({label, icon}) => (
@@ -26,52 +26,13 @@ export const PlayerCard = ({selectedClass, filteredRole}: PlayerStatsProps) => {
               </div>
             ))}
           </div>
+          <div className='absolute top-3 left-[36%] flex items-center gap-2'>
+            <a href={`https://www.warcraftlogs.com/character/US/${characterRealm}/${characterName}`}><img className='w-6 h-6' src={wLogsLogo} /></a>
+            <a href={`https://worldofwarcraft.com/en-us/character/us/${characterRealm}/${characterName}`}><img className='w-8 h-7' src={wowLogo} /></a>
+            <a href={`https://raider.io/characters/us/${characterRealm}/${characterName}`}><img className='w-7 h-7' src={raiderIoLogo} /></a>
+          </div>
         </motion.div>
       ))}
     </div>
   )
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// <div className='w-[85%] md:w-[80%] xl:w-[90%] mx-auto flex flex-wrap justify-center gap-6'>
-
-//   {filteredPlayers.map(({name, rank, description, mainClass, mainRole, tags}) => (
-//     <div className={`p-4 *:mt-5 mb-5 min-w-25 max-w-60 rounded-md inset-shadow-lg border transition duration-300 ease-in-out ${classColor[mainClass.toLowerCase()].bg}/50 ${classColor[mainClass.toLowerCase()].border} ${classColor[mainClass.toLowerCase()].shadow}`}>
-//       <h1 className='text-3xl font-Roboto uppercase tracking-tighter font-bold'>{rank}</h1>
-//       <h2 className='text-2xl text-[#030712] font-semibold tracking-tighter'>{name}</h2>
-//       <h3 className=''>{mainClass}</h3>
-//       <p>{description}</p>
-//       <div className='flex'>
-//         {tags.map(({label, icon}) => (
-//           <div className='flex'>
-//             <p className=''>{icon}</p>
-//             <p className='font-semibold'>{label}</p>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   ))}
-// </div>

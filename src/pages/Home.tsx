@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import mainBanner from "../assets/Rectangle 171.png"
+import mainBanner from "../assets/banners/banner-one.png"
 import { CurrentProgress } from "../components/CurrentProgression";
 import { RecruitmentStatus } from "../components/RecruitmentStatus";
 import { RaidHistory } from "../components/RaidHistory";

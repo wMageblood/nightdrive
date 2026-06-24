@@ -1,7 +1,7 @@
 const ROUTES = [
-  { path: "/", routeName: "home" },
+  { path: "/", routeName: "INICIO" },
   { path: "/roster", routeName: "roster" },
-  { path: "/about", routeName: "about" },
+  { path: "/about", routeName: "SOBRE NOSOTROS" },
   // { path: "/apply", routeName: "apply" },
 ];
 

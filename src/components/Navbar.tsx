@@ -16,7 +16,7 @@ const Navbar = () => {
         </div>
 
         <div>
-            {ROUTES.map(({path, routeName}) => <a key={path} className={`font-Rajdhani text-2xl mx-10 uppercase font-semibold text-[#cad0d3] ${currentPath === path ? 'text-accentPurple' : 'text-[#cad0d3]'}`} href={path}>{routeName}</a>)}
+            {ROUTES.map(({path, routeName}) => <a key={path} className={`font-Rajdhani text-2xl mx-10 uppercase font-semibold text-[#cad0d3] ${currentPath === path ? 'text-[#e75ea9]' : 'text-[#cad0d3]'}`} href={path}>{routeName}</a>)}
         </div>
 
         <div className='justify-self-end mr-1 tracking-tighter border border-[#181b28]'>
@@ -33,7 +33,7 @@ const Navbar = () => {
         </div>
         <div className='col-span-2 w-full justify-between items-center mr-6 *:font-Rajdhani *:font-semibold text-lg flex'>
           <a href={'/roster'} className='text-white text-2xl'>ROSTER</a>
-          <a href={'/about'} className='text-white text-2xl'>ABOUT</a>
+          <a href={'/about'} className='text-white text-2xl'>SOBRE NOSOTROS</a>
           <a href={'/apply'} className='text-[#0e1220] bg-white px-2 py-1 text-2xl rounded-md border border-[#181b28] shadow-soft-blur'>APPLY</a>
         </div>
 
