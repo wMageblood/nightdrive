@@ -1,7 +1,13 @@
 export const FIELD_DESCRIPTIONS = {
   name: (
     <>
-      Tiene que aparecer en la página de Raider.IO
+      {/* Nombre de tu personaje: <br/>
+
+      <p className='text-sm mt-3 text-[#e9c004] font-normal'>Tu nombre tiene que aparecer en la página de Raider.IO</p>
+      <p className='text-sm mt-3 text-[#5eb1d9] font-normal mb-2'>Ejemplo:</p>
+      <a href={'https://raider.io/characters/us/altar-of-storms/Esh'} target="_blank" className='text-sm underline text-[#19c707] font-normal'>Esh</a> */}
+
+      <p className='text-[#b1ad0c] font-normal'>Tu personaje debe de existir en Raider.IO antes de poder aplicar.</p>
     </>
   ),
 

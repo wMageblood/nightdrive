@@ -13,7 +13,8 @@ export const RecruitmentStatus = () => {
 
         <p className='text-[#353433] hover:text-[#7a7774] transition duration-300'>UPDATED: {formattedDate}</p>
       </div>
-      <div className='bg-[#0e1220] text-[#d9d4c5] px-6 pt-4 pb-2 border border-slate-800 rounded-br-md rounded-bl-md overflow-y-auto h-120 min-h-120 max-h-120 scrollbar-thin scrollbar-thumb-[#1d293d] scrollbar-track-[#0e1220]'>
+      <div className='bg-[#0e1220] text-[#d9d4c5] px-6 pt-4 pb-2 border border-slate-800 rounded-br-md rounded-bl-md overflow-y-auto h-121 scrollbar-thin scrollbar-thumb-[#1d293d] scrollbar-track-[#0e1220]'>
+      {/* <div className='bg-[#0e1220] text-[#d9d4c5] px-6 pt-4 pb-2 border border-slate-800 rounded-br-md rounded-bl-md overflow-y-auto h-120 min-h-120 max-h-125 scrollbar-thin scrollbar-thumb-[#1d293d] scrollbar-track-[#0e1220]'> */}
           <div>
             {RECRUITMENT.map(({specName, specIcon, priority}) => (
               <div className='flex items-center gap-2 *:uppercase mb-3'>

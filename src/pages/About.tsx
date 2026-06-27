@@ -3,7 +3,7 @@ import { AboutTitle } from "../components/svg/AboutTitle";
 
 const About = () => {
   return (
-    <div>
+    <div className='w-[85%] mx-auto'>
       <Navbar />
       <div className="flex items-center justify-center mb-10 mt-25 xl:mx-0 mx-10">
         <AboutTitle />

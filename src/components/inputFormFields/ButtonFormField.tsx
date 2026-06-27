@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { InputFormArrow } from "../svg/InputFormArrow";
+import { ChevronDownCircle } from "lucide-react";
 
 type ButtonFormProps<T> = {
   data: T[],
+  label: string,
   zIndex?: string
   buttonText: string,
   getLabel: (item: T) => string,
@@ -15,15 +17,35 @@ export const ButtonFormField = <T,>(props: ButtonFormProps<T>) => {
 
   const [visibility, setVisibility] = useState(false);
 
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      wrapperRef.current &&
+      !wrapperRef.current.contains(event.target as Node)
+    ) {
+      setVisibility(false);
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
+
   return (
 
-    <div onClick={() => setVisibility(!visibility)} className={`relative w-1/2 mb-15 ${props.zIndex}`}>
-          <button type="button" className="input-form-button">
+    <div ref={wrapperRef} className={`relative ${props.zIndex}`}>
+      <p className='block text-slate-600 uppercase font-bold text-xs mb-2'>{props.label}</p>
+          <button onFocus={() => setVisibility(true)}  type="button" className="input-form-main-role-styling">
             {props.buttonText}
           </button>
-            <InputFormArrow isOpen={visibility}/>
+          <ChevronDownCircle className={`text-[#a04aff] absolute right-2 bottom-3 transition-transform duration-200 ${visibility ? 'rotate-90' : 'null'}`} />
           {visibility && (
-            <div className="input-form-dropdown-body">
+            <div className="input-form-dropdown-body z-2">
             {props.data.map((item) => (
               <div key={props.getValue(item)} onClick={() => {props.onSelect(props.getValue(item)); setVisibility(false);}} className="input-form-dropdown">
                 <img width={23} className="mr-2" src={props.getIcon?.(item)} />  {props.getLabel(item)}

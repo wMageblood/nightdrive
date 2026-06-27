@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -98,6 +99,7 @@
     --font-weight-800: 800;
     --font-weight-900: 900;
 
+    --font-Inter: "Inter", sans-serif;
     --font-Geist: "Geist", sans-serif;
     --font-Roboto: "Roboto", sans-serif;
     --font-Rajdhani: "Rajdhani", sans-serif;
@@ -113,19 +115,31 @@
 
 
 .input-form-button {
-    @apply w-full rounded-full border border-inputFormElements h-10 px-4 text-left text-inputFormElements bg-inputFormBackground shadow-3xl
+    @apply w-full rounded-md border-2 border-[#cad0d3] h-11 px-4 font-Inter text-left text-[#cad0d3]
   }
 
-.input-form-styling {
-    @apply bg-inputFormBackground border shadow-3xl w-full border-inputFormElements text-inputFormElements focus:outline-0 rounded-full h-10 mx-auto pl-4 pr-10 pb-px
+.input-form-realm-styling {
+    @apply focus:outline-0 border rounded-md px-2.5 py-3 border-slate-800 shadow-3xl w-full placeholder:text-[#9da49f] font-Inter text-[#9da4ac]
+}
+
+.input-form-main-role-styling {
+    @apply focus:outline-0 border rounded-md px-2.5 py-3 border-slate-800 w-full text-left shadow-3xl h-12 placeholder:text-slate-600 font-Inter placeholder:font-semibold text-[#9da4ac]
+}
+
+.input-text-area-styling {
+    @apply focus:outline-0 border rounded-md px-2.5 py-3 border-slate-800 shadow-3xl w-full h-35 min-h-35 placeholder:text-slate-600 font-Inter placeholder:font-semibold text-[#9da4ac]
+}
+
+.input-form-styling-two {
+    @apply focus:outline-0 border rounded-md px-2.5 py-3 border-slate-800 shadow-3xl font-Inter w-full placeholder:text-slate-600 placeholder:font-semibold text-[#9da4ac]
 }
 
 .input-form-dropdown {
-  @apply px-4 py-3 text-inputFormElements hover:bg-white/10 cursor-pointer transition-colors flex
+  @apply px-4 py-2 text-[#cad0d3] hover:bg-white/10 cursor-pointer transition-colors flex
 }
 
 .input-form-dropdown-body {
-  @apply max-h-64 overflow-y-auto absolute w-[90%] rounded-b-2xl border-l border-r border-b right-[5%] -mt-[px] border-inputFormElements bg-inputFormBackground overflow-hidden shadow-3xl
+  @apply max-h-64 overflow-y-auto absolute w-[90%] rounded-b-md border-l border-r border-b right-[5%] -mt-[px] border-slate-800 bg-[#0e1220] font-Inter overflow-hidden shadow-3xl
 }
 
 .button-delete-primary {
