@@ -13,8 +13,6 @@ const initialState = { name: "", realm: "", main: "", role: "", availability: ""
 
 export const InputForm = () => {
 
-
-
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
@@ -32,6 +30,8 @@ export const InputForm = () => {
     reasons: "",
     personal: "",
   });
+
+  const handleSubmitTest = () => console.log(form)
 
   const handleSubmit = async () => {
 
@@ -147,7 +147,8 @@ export const InputForm = () => {
           <div className='border-b border-slate-800 w-full col-span-full mt-5 mb-2'/>
           <div className='flex col-span-full items-center text-slate-800 font-bold font-Rajdhani mb-5 justify-between'>
             Se envía directo a nuestro Discord.
-            <SubmitButton status={loading} handler={handleSubmit}/>
+            <span className='text-2xl text-red-500'>ESTAMOS HACIENDO CAMBIOS, NO ENVIES APPLIES YA QUE NO LLEGARAN, VUELVE MAS TARDE</span>
+            <SubmitButton status={loading} handler={handleSubmitTest}/>
           </div>
           <div className="bg-red-500 ml-auto">
           </div>
