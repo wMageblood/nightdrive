@@ -9,7 +9,7 @@ interface discordProps {
   realm: string,
   name: string,
   main: string,
-  alt: string,
+  personal: string,
   role: string,
 
 }
@@ -28,7 +28,7 @@ export const sendWebhook = async ({ experience, availability, reasons, contact, 
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      content: `# ${randomPhrase}`,
+      // content: `# ${randomPhrase}`,
       embeds: [
         {
           title: `${name} - ${realm}`,
@@ -40,8 +40,8 @@ export const sendWebhook = async ({ experience, availability, reasons, contact, 
           color: classColors,
           fields: [
             { name: "Main", value: `${mainIcon} ${main}`, inline: true },
-            { name: "Alt", value: `${altIcon} ${alt}`, inline: true },
             { name: "Role", value: `${roleIcon} ${role}`, inline: true },
+            { name: "Información Personal", value: `${altIcon} ${alt}`, inline: true },
             { name: "__Experiencia__:", value: experience },
             { name: "__Disponibilidad horaria__:", value: availability },
             { name: "__Razones para aplicar__:", value: reasons },
