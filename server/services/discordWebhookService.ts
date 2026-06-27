@@ -38,11 +38,11 @@ export const sendWebhook = async ({ experience, availability, reasons, contact, 
           fields: [
             { name: "Main", value: `${mainIcon} ${main}`, inline: true },
             { name: "Role", value: `${roleIcon} ${role}`, inline: true },
-            { name: "__Información Personal__", value: `${personal}`, inline: true },
-            { name: "__Experiencia__:", value: experience },
             { name: "__Disponibilidad horaria__:", value: availability },
-            { name: "__Razones para aplicar__:", value: reasons },
             { name: "__Información de contacto__:", value: contact },
+            { name: "__Experiencia__:", value: experience },
+            { name: "__Razones para aplicar__:", value: reasons },
+            { name: "__Información Personal__", value: `${personal}` },
           ],
           footer: {
             text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
