@@ -136,7 +136,7 @@ export const InputForm = () => {
           </div>
 
           <div className='col-span-1 md:col-span-full'>
-            <TextAreaFormField placeholder={'Incluye progreso, guilds anteriores, roles que has jugado y cualquier logro relevante.'} label={'Experiencia'} id={'experience'} inputMaxLenght={1000} inputValue={form.experience} stateValues={(e: React.ChangeEvent<HTMLInputElement>) => setForm({ ...form, experience: e.target.value})} fieldDescription={FIELD_DESCRIPTIONS.experience} zIndex=''/>
+            <TextAreaFormField placeholder={'Incluye progreso, guilds anteriores, roles que has jugado y cualquier logro relevante.'} label={'Experiencia'} id={'experience'} inputMaxLenght={950} inputValue={form.experience} stateValues={(e: React.ChangeEvent<HTMLInputElement>) => setForm({ ...form, experience: e.target.value})} fieldDescription={FIELD_DESCRIPTIONS.experience} zIndex=''/>
           </div>
           <div className='col-span-1'>
             <TextAreaFormField placeholder={'¿Por qué nosotros? ¿Qué buscas?'} label={'Razones para aplicar'} id={'reasons'} inputMaxLenght={800} inputValue={form.reasons} stateValues={(e: React.ChangeEvent<HTMLInputElement>) => setForm({ ...form, reasons: e.target.value})} fieldDescription={FIELD_DESCRIPTIONS.reasons} zIndex={''}/>
