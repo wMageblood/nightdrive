@@ -148,7 +148,7 @@ export const InputForm = () => {
           <div className='flex col-span-full items-center text-slate-800 font-bold font-Rajdhani mb-5 justify-between'>
             Se envía directo a nuestro Discord.
             <span className='text-2xl text-red-500'>ESTAMOS HACIENDO CAMBIOS, NO ENVIES APPLIES YA QUE NO LLEGARAN, VUELVE MAS TARDE</span>
-            <SubmitButton status={loading} handler={handleSubmitTest}/>
+            <SubmitButton status={loading} handler={handleSubmit}/>
           </div>
           <div className="bg-red-500 ml-auto">
           </div>
