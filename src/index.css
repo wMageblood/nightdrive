@@ -127,7 +127,7 @@
 }
 
 .input-text-area-styling {
-    @apply focus:outline-0 border rounded-md px-2.5 py-3 border-slate-800 shadow-3xl w-full h-35 min-h-35 placeholder:text-slate-600 font-Inter placeholder:font-semibold text-[#9da4ac]
+    @apply focus:outline-0 border rounded-md px-2.5 py-3 border-slate-800 shadow-3xl w-full h-30 min-h-30 placeholder:text-slate-600 font-Inter placeholder:font-semibold text-[#9da4ac]
 }
 
 .input-form-styling-two {

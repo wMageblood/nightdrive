@@ -18,20 +18,8 @@ export const InputForm = () => {
   const [error, setError] = useState(false);
 
   const activeStatus = error ? STATUS_MESSAGES.error : success ? STATUS_MESSAGES.success : null;
+  const [form, setForm] = useState({ name: "", realm: "", main: "", role: "", availability: "", contact: "", experience: "", reasons: "", personal: "" });
 
-  const [form, setForm] = useState({
-    name: "",
-    realm: "",
-    main: "",
-    role: "",
-    availability: "",
-    contact: "",
-    experience: "",
-    reasons: "",
-    personal: "",
-  });
-
-  const handleSubmitTest = () => console.log(form)
 
   const handleSubmit = async () => {
 
@@ -97,12 +85,6 @@ export const InputForm = () => {
             <div className='flex-1 h-0.5 bg-linear-to-r from-[#B04AFF] to-bg-transparent ml-3'></div>
           </div>
 
-        {/* <div>
-          <label className='block text-slate-600 uppercase font-bold text-xs mb-2'>Nombre de tu personaje</label>
-          <input className='focus:outline-0 border rounded-md px-2.5 py-3 border-slate-800 w-full placeholder:text-slate-600 placeholder:font-semibold text-[#9da4ac]' type='text' placeholder='Ej. Esh'></input>
-        </div> */}
-
-
           <div className=''>
             <InputFormField id={'name'} placeholder='Ej. Esh' label={'Nombre de tu personaje'} inputMaxLenght={50} inputValue={form.name} stateValues={(e: React.ChangeEvent<HTMLInputElement>) => setForm({ ...form, name: e.target.value})} fieldDescription={FIELD_DESCRIPTIONS.name} zIndex={''}/>
           </div>
@@ -118,9 +100,6 @@ export const InputForm = () => {
           <div>
             <InputFormField placeholder='Dias y horarios de raid' label={'Disponibilidad'} id={'availability'} inputMaxLenght={150} inputValue={form.availability} stateValues={(e: React.ChangeEvent<HTMLInputElement>) => setForm({ ...form, availability: e.target.value})} fieldDescription={FIELD_DESCRIPTIONS.availability} zIndex={''} />
           </div>
-          {/* <div className=''>
-            <ButtonFormField buttonText={form.alt || ''} label='Alt' data={CLASS_NAMES} getLabel={(item) => item.wowClass} getValue={(item) => item.value} getIcon={(item) => item.icon} onSelect={(value) => setForm({ ...form, alt: value})} zIndex={''}/>
-          </div> */}
           <div>
             <InputFormField placeholder='Usuario de Discord o BattleTag#1234' label={'Discord y BNET'} id={'contact'} inputMaxLenght={100} inputValue={form.contact} stateValues={(e: React.ChangeEvent<HTMLInputElement>) => setForm({ ...form, contact: e.target.value})} fieldDescription={FIELD_DESCRIPTIONS.contact}/>
           </div>
@@ -147,14 +126,10 @@ export const InputForm = () => {
           <div className='border-b border-slate-800 w-full col-span-full mt-5 mb-2'/>
           <div className='flex col-span-full items-center text-slate-800 font-bold font-Rajdhani mb-5 justify-between'>
             Se envía directo a nuestro Discord.
-            <span className='text-2xl text-red-500'>ESTAMOS HACIENDO CAMBIOS, NO ENVIES APPLIES YA QUE NO LLEGARAN, VUELVE MAS TARDE</span>
             <SubmitButton status={loading} handler={handleSubmit}/>
           </div>
           <div className="bg-red-500 ml-auto">
           </div>
-
-      {/*
-      */}
 
         {activeStatus && (
           <div className={`flex items-center justify-center ${activeStatus.className} rounded-sm h-12 px-2 font-Roboto font-bold mx-auto`}>
