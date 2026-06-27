@@ -21,7 +21,7 @@ export function getDataBase() {
     role: { type: String, trim: false, required: true },
     availability: { type: String, trim: true, maxlength: 150, required: true },
     contact: { type: String, trim: true, maxlength: 100, required: true },
-    experience: { type: String, trim: true, maxlength: 1000, required: true },
+    experience: { type: String, trim: true, maxlength: 1024, required: true },
     reasons: { type: String, trim: true, maxlength: 800, required: true },
     personal: { type: String, trim: true, maxlength: 800, required: true },
   });
