@@ -19,7 +19,7 @@ export const CurrentProgress = () => {
         <span className='md:text-lg xl:text-xl'>VS / DR / MQD</span>
           <div className=''>
             {RAID_PROGRESSION.map(({difficulty, kills, total, color, backgroundColor, hexColor}) => (
-              <div className='mt-5'>
+              <div key={difficulty} className='mt-5'>
                 <h1 className={`ml-5 ${color} md:text-lg xl:text-xl`}>{`${difficulty.toUpperCase()} ${kills}/${total}`}</h1>
                 <div className='w-full'>
                   <div className="h-2 rounded-full bg-[#1d1717] my-4 mx-5 shadow-soft-blur">

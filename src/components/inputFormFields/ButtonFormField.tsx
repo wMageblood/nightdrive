@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { InputFormArrow } from "../svg/InputFormArrow";
 import { ChevronDownCircle } from "lucide-react";
 
 type ButtonFormProps<T> = {

@@ -1,4 +1,4 @@
-import * as CLASSES from "../assets/smallClassIcons/smallClassIcons"
+import * as CLASSES from "../assets/smallClassIcons/index.ts"
 import * as ROLE_ICONS from "../assets/roleIcons/roleIcons"
 
 export const CLASS_NAMES = [

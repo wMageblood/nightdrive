@@ -20,8 +20,8 @@ export const RaidHistory = () => {
 
             <div className='grid grid-cols-4 gap-5 py-3 text-center uppercase items-center'>
               <h1 className='col-span-4 text-2xl text-[#c9cfd2] text-center border border-slate-800 bg-[#030712] shadow-soft-blur'>Midnight</h1>
-                {RAID_RANKINGS.filter(row => row.expansionName === 'Midnight').map((row) => (
-                  <div className='contents *:text-lg'>
+                {RAID_RANKINGS.filter(row => row.expansionName === 'Midnight').map((row, index) => (
+                  <div key={index} className='contents *:text-lg'>
                     <div>{row.raidName}</div>
                     <div className={`${rankingColor(row.worldRank)}`}>{row.worldRank}</div>
                     <div className={`${rankingColor(row.regionRank)}`}>{row.regionRank}</div>
@@ -33,8 +33,8 @@ export const RaidHistory = () => {
 
             <div className='grid grid-cols-4 gap-5 py-3 text-center uppercase'>
                 <h1 className='col-span-4 text-2xl text-[#c9cfd2] text-center border border-slate-800 bg-[#030712] shadow-soft-blur'>The War Within</h1>
-                {RAID_RANKINGS.filter(row => row.expansionName === 'TWW').map((row) => (
-                  <div className='contents *:text-lg'>
+                {RAID_RANKINGS.filter(row => row.expansionName === 'TWW').map((row, index) => (
+                  <div key={index} className='contents *:text-lg'>
                     <div>{row.raidName}</div>
                     <div className={`${rankingColor(row.worldRank)}`}>{row.worldRank}</div>
                     <div className={`${rankingColor(row.regionRank)}`}>{row.regionRank}</div>
@@ -45,8 +45,8 @@ export const RaidHistory = () => {
 
             <div className='grid grid-cols-4 gap-5 py-3 text-center uppercase items-center'>
                 <h1 className='col-span-4 text-2xl text-[#c9cfd2] text-center border border-slate-800 bg-[#030712] shadow-soft-blur'>Dragonflight</h1>
-                {RAID_RANKINGS.filter(row => row.expansionName === 'DF').map((row) => (
-                  <div className='contents *:text-lg'>
+                {RAID_RANKINGS.filter(row => row.expansionName === 'DF').map((row, index) => (
+                  <div key={index} className='contents *:text-lg'>
                     <div>{row.raidName}</div>
                     <div className={`${rankingColor(row.worldRank)}`}>{row.worldRank}</div>
                     <div className={`${rankingColor(row.regionRank)}`}>{row.regionRank}</div>

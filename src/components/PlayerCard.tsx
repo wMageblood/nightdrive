@@ -20,7 +20,7 @@ export const PlayerCard = ({selectedFilter}: PlayerStatsProps) => {
           <h2 className='text-3xl text-[#cad0d3] font-semibold tracking-tighter'>{name}</h2>
           <div className='flex'>
             {tags.map(({label, icon}) => (
-              <div className='flex flex-wrap bg-[#030712] mr-2 p-2 *:text-[#cad0d3] *:text-sm rounded-md border border-[#cad0d3] mt-4 select-none'>
+              <div key={label} className='flex flex-wrap bg-[#030712] mr-2 p-2 *:text-[#cad0d3] *:text-sm rounded-md border border-[#cad0d3] mt-4 select-none'>
                 <p className=''>{icon}</p>
                 <p className={`font-semibold ${icon ? 'ml-1' : 'ml-0'}`}>{label}</p>
               </div>

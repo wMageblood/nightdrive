@@ -6,7 +6,7 @@ import { RealmFormField } from "./inputFormFields/RealmFormField";
 import { CLASS_NAMES, ROLE_NAMES } from "../constants/wowConstants";
 import { SubmitButton } from "../components/inputFormFields/SubmitButton";
 import { ButtonFormField } from "../components/inputFormFields/ButtonFormField";
-import { ListCollapse, MessageCircleWarningIcon} from "lucide-react";
+import { MessageCircleWarningIcon} from "lucide-react";
 import { TextAreaFormField } from "./inputFormFields/TextAreaFormField";
 
 const initialState = { name: "", realm: "", main: "", role: "", availability: "", contact: "", experience: "", reasons: "", personal: ""  };
@@ -67,9 +67,9 @@ export const InputForm = () => {
 
   return (
     <div>
-      <div className='flex text-center px-4 text-sm font-Inter text-white bg-[#af4afe]/28 py-4 mb-10 border border-[#af4afe] rounded-md shadow-[0_0_6px_rgba(172,72,250,0.55),0_0_30px_rgba(172,72,250,0.35)]'>
-        <MessageCircleWarningIcon />
-        <h1 className='ml-3'>Este apply es nuestra <span className='font-semibold'>primera impresión</span>. Los applies cortos, con horrores ortográficos o con poca información se eliminan directamente - tómate tu tiempo.</h1>
+      <div className='flex text-center text-sm font-Inter text-white bg-[#af4afe]/28 py-4 mb-10 border border-[#af4afe] rounded-md shadow-[0_0_6px_rgba(172,72,250,0.55),0_0_30px_rgba(172,72,250,0.35)]'>
+        <MessageCircleWarningIcon className='w-20 ml-2' />
+        <h1 className=''>Este apply es nuestra <span className='font-semibold'>primera impresión</span>. Los applies cortos, con horrores ortográficos o con poca información se eliminan directamente - tómate tu tiempo.</h1>
       </div>
 
 
@@ -127,8 +127,6 @@ export const InputForm = () => {
           <div className='flex col-span-full items-center text-slate-800 font-bold font-Rajdhani mb-5 justify-between'>
             Se envía directo a nuestro Discord.
             <SubmitButton status={loading} handler={handleSubmit}/>
-          </div>
-          <div className="bg-red-500 ml-auto">
           </div>
 
         {activeStatus && (

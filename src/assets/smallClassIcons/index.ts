@@ -1,4 +1,4 @@
-export { default as dkIcon } from "./classicon_deathknight.jpg"
+export { default as dkIcon } from "./spell_deathknight_classicon (1).jpg"
 export { default as dhIcon } from "./classicon_demonhunter (1).jpg"
 export { default as druidIcon } from "./classicon_druid (1).jpg"
 export { default as evokerIcon } from "./classicon_evoker (1).jpg"

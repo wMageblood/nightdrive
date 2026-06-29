@@ -1,5 +1,4 @@
 import Navbar from "../components/Navbar";
-import { ApplyTitle } from "../components/svg/ApplyTitle";
 import { InputForm } from "../components/InputForm"
 import banner from "../assets/banners/banner-apply.png"
 import { RecruitmentStatus } from "../components/RecruitmentStatus";

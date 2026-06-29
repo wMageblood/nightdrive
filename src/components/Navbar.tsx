@@ -24,20 +24,13 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className='grid md:hidden grid-cols-3 place-items-center shadow-soft-blur relative mt-10 h-15 mx-auto bg-[#0e1220] rounded-md border border-[#181b28]'>
-        <div className=''>
-          <div className='absolute -top-9 -left-9'>
-            <MagiMark width={'w-35'} />
-          </div>
-          <a href={`/`}><img className='absolute w-20 h-20 -top-2 -left-1' src={logo} /></a>
-        </div>
-        <div className='col-span-2 w-full justify-between items-center mr-6 *:font-Rajdhani *:font-semibold text-lg flex'>
-          <a href={'/roster'} className='text-white text-2xl'>ROSTER</a>
-          <a href={'/about'} className='text-white text-2xl'>SOBRE NOSOTROS</a>
-          <a href={'/apply'} className='text-[#0e1220] bg-[#ac48fa] px-2 py-1 text-2xl rounded-md border border-[#181b28] shadow-soft-blur'>APPLY</a>
-        </div>
-
+      <div className='flex md:hidden items-center justify-between shadow-soft-blur mt-10 h-15 mx-auto bg-[#0e1220] rounded-md border border-[#181b28]'>
+          <a className='ml-2' href={`/`}><img className='w-10 h-10' src={logo} /></a>
+          <a href={'/roster'} className='text-[#cad0d3] font-semibold text-lg'>ROSTER</a>
+          <a href={'/about'} className='text-[#cad0d3] font-semibold text-lg'>NOSOTROS</a>
+          <a href={'/apply'} className='text-[#0e1220] bg-[#ac48fa] font-semibold px-2 py-1 text-lg rounded-md border border-[#181b28] shadow-soft-blur mr-2'>APLICA</a>
       </div>
+
 
     </div>
   );
