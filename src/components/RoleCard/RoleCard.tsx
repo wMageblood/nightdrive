@@ -30,7 +30,7 @@ export const RoleCard = () => {
 
       <div className='relative'>
         <img className='w-full rounded-md mb-10 mask-[linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0))] border border-[#181b28]' src={banner} />
-        <h1 className='font-Geist text-lg md:text-2xl text-white font-semibold absolute bottom-[5%] left-[2%] tracking-wide'> La crème de la crème latinoamericana </h1>
+        <h1 className='font-Geist text-lg md:text-2xl text-white font-semibold absolute bottom-[5%] left-[2%] tracking-wide'> </h1>
       </div>
       <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6'>
         <div className='text-3xl px-6 py-4 text-white border border-[#181b28] bg-[#0e1220] border-l-highlightColor4 border-l-4 rounded-md *:font-Rajdhani shadow-soft-blur'>

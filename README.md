@@ -62,6 +62,8 @@ This is a fan-made project created for educational and portfolio purposes.
 
 World of Warcraft®, Warcraft®, Blizzard Entertainment®, and all related names, logos, artwork, and assets are trademarks or registered trademarks of Blizzard Entertainment, Inc.
 
+Character and progression data are provided by Raider.IO through its public API.
+
 Raider.IO and Warcraft Logs are trademarks of their respective owners. This project is not affiliated with, endorsed by, or sponsored by Blizzard Entertainment, Raider.IO, or Warcraft Logs.
 
 Character, progression, and performance data are provided by Blizzard and/or third-party services where applicable.
