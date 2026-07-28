@@ -1,4 +1,4 @@
-import { CLASS_EMOJIS, CLASS_COLORS, ROLE_EMOJIS, APPLY_PHRASES } from "../constants/embededMessageProperties"
+import { CLASS_EMOJIS, CLASS_COLORS, ROLE_EMOJIS } from "../constants/embededMessageProperties"
 import normalizeString from "../utils/normalizeString"
 
 interface discordProps {
